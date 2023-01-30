@@ -1,41 +1,44 @@
 /** @format */
 
-h6 {
-	font-size: 0.7em !important;
+.asideBar{
+height: 100vh;
 }
-.card-body{
-
-
-.firstTitle {
-	font-size: 4em !important;
-}
-}
-
 
 
 /* scroll colonna 1 */
 .playlist-container-list {
     overflow-y: scroll;
-    height: 400px; 
-  } 
-  /* menù colonna 1 - levati pallini lista  */
-  .menu {
+    height: 100vh; 
+} 
+/* menù colonna 1 - levati pallini lista  */
+.menu {
     list-style-type: none;
     margin: 0;
     padding: 0;
     
-  }
-  /* menù colonna 1 nero con testo bianco */
-  .allblacks{
+}
+/* menù colonna 1 nero con testo bianco */
+.allblacks{
     background-color: black;
     color: white;
-  }
-  /* margine p */
-  .playlist-container-list-title{
+}
+/* margine p */
+.playlist-container-list-title{
     margin: 3px;
-  }
-  /* bottone menù tendina colonna 1 */
-  .bottone{
+}
+/* bottone menù tendina colonna 1 */
+.bottone{
     background-color: black;
     color: white;
-  }
+}
+
+h6 {
+    font-size: 0.7em !important;
+}
+.card-body{
+
+
+.firstTitle {
+    font-size: 4em !important;
+}
+}
