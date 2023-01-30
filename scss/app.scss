@@ -5,15 +5,10 @@
 body {
   font-family: "Montserrat", sans-serif;
 }
-
-.asideBar {
-  height: 100vh;
-}
-
 /* scroll colonna 1 */
 .playlist-container-list {
   overflow-y: scroll;
-  height: 100vh;
+
 }
 /* menù colonna 1 - levati pallini lista  */
 .menu {
@@ -25,6 +20,7 @@ body {
 .allblacks {
   background-color: black;
   color: white;
+  height: 100%;
 }
 /* margine p */
 .playlist-container-list-title {
