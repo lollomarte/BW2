@@ -1,8 +1,10 @@
-div {
-  border: 1px solid black;
-}/*# sourceMappingURL=app.css.map */
 
 .playlist-container-list {
   overflow-y: scroll;
   height: 400px;
+}
+.menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
