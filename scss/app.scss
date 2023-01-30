@@ -1,44 +1,46 @@
 /** @format */
 
-.asideBar{
-height: 100vh;
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap%27");
+
+body {
+  font-family: "Montserrat", sans-serif;
 }
 
+.asideBar {
+  height: 100vh;
+}
 
 /* scroll colonna 1 */
 .playlist-container-list {
-    overflow-y: scroll;
-    height: 100vh; 
-} 
+  overflow-y: scroll;
+  height: 100vh;
+}
 /* menù colonna 1 - levati pallini lista  */
 .menu {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 /* menù colonna 1 nero con testo bianco */
-.allblacks{
-    background-color: black;
-    color: white;
+.allblacks {
+  background-color: black;
+  color: white;
 }
 /* margine p */
-.playlist-container-list-title{
-    margin: 3px;
+.playlist-container-list-title {
+  margin: 3px;
 }
 /* bottone menù tendina colonna 1 */
-.bottone{
-    background-color: black;
-    color: white;
+.bottone {
+  background-color: black;
+  color: white;
 }
 
 h6 {
-    font-size: 0.7em !important;
+  font-size: 0.7em !important;
 }
-.card-body{
-
-
-.firstTitle {
+.card-body {
+  .firstTitle {
     font-size: 4em !important;
-}
+  }
 }
