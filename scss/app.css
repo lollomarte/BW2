@@ -11,7 +11,7 @@ h6 {
 /* scroll colonna 1 */
 .playlist-container-list {
   overflow-y: scroll;
-  height: 400px;
+  height: 100vh;
 }
 
 /* menù colonna 1 - levati pallini lista  */
