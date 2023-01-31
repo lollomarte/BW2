@@ -164,14 +164,20 @@ button {
 .LeftAsideContainer {
   height: 100vh;
 }
-
 ::-webkit-scrollbar {
   width: 10px;
   background-color: black;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  height: 1px;
+}
+
+::-webkit-scrollbar:hover {
+  opacity: 1;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: rgb(57, 57, 57);
+  background-color: rgb(0, 0, 0);
 }
 
 ::-webkit-scrollbar-thumb:hover {
