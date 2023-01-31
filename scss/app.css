@@ -246,3 +246,36 @@ audio {
   height: 100%;
   background-color: white;
 }
+#music-player {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #333;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn {
+  background-color: transparent;
+  border-color: white;
+  color: white;
+  margin: 0 10px;
+}
+
+audio {
+  width: 100%;
+}
+
+#progress-bar {
+  width: 60%;
+  height: 5px;
+  background-color: white;
+  margin: 20px 10px;
+}
+
+#progress {
+  height: 100%;
+  background-color: white;
+}
