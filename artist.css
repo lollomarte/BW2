@@ -2,3 +2,8 @@
     top: 50% !important;
 }
 
+.button{
+    border-radius: 8px !important;
+    background-color: transparent !important;
+    color:white;
+}
