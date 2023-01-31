@@ -1,0 +1,29 @@
+.IconContainer {
+    display: flex;
+    @media screen and (min-width: 769px) {
+      display: none;
+    }
+  }
+  .secondTitle, .MobileFooter {
+    @media screen and (min-width: 769px) {
+      display: none !important;
+    }
+  }
+  
+  .row .leftaside{
+    @media screen and (max-width: 769px) {
+      display: none !important;
+    }
+  }
+  .rightAside, .topnav, .firstCol, .FirstCardTitle{
+    @media screen and (max-width: 769px) {
+      display: none !important;
+    }
+  }
+  .firstTitle {
+     @media screen and (max-width: 769px) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+     }
+  }
