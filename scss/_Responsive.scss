@@ -27,6 +27,7 @@
       align-items: center;
      }
   }
+
   #music-player{
     @media screen and (max-width: 769px) {
       display: none !important;
@@ -42,13 +43,16 @@
         
       }
       .imgContainerAlbum {
-        align-self: center;
-        img {
-          
+        @media screen and (max-width: 769px){
+
+          align-self: center;
         }
       }
       h1 {
-        font-size: 2em !important;
+        @media screen and (max-width: 769px){
+
+          font-size: 2em !important;
+        }
       }
     }
   }

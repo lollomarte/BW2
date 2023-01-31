@@ -52,11 +52,15 @@
     flex-direction: column;
   }
 }
-.centralSection .headerAlbum .imgContainerAlbum {
-  align-self: center;
+@media screen and (max-width: 769px) {
+  .centralSection .headerAlbum .imgContainerAlbum {
+    align-self: center;
+  }
 }
-.centralSection .headerAlbum h1 {
-  font-size: 2em !important;
+@media screen and (max-width: 769px) {
+  .centralSection .headerAlbum h1 {
+    font-size: 2em !important;
+  }
 }
 
 .MobileFooter {
