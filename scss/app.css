@@ -1,43 +1,68 @@
 @charset "UTF-8";
 /** @format */
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap%27");
-.IconContainer {
-  display: flex;
-}
-@media screen and (min-width: 769px) {
-  .IconContainer {
-    display: none;
-  }
+.centralSection {
+  background: linear-gradient(#e5c651, black 60vh) !important;
+  color: white;
 }
 
-@media screen and (min-width: 769px) {
-  .secondTitle, .MobileFooter {
-    display: none !important;
-  }
+.headerAlbum .mainImage {
+  width: 100% !important;
+  box-shadow: 0px 0px 40px black;
 }
 
-@media screen and (max-width: 769px) {
-  .row .leftaside {
-    display: none !important;
-  }
+.headerAlbum h1 {
+  font-size: 5em !important;
+  font-weight: 800 !important;
 }
 
-@media screen and (max-width: 769px) {
-  .rightAside, .topnav, .firstCol, .FirstCardTitle {
-    display: none !important;
-  }
+.headerAlbum p {
+  font-size: 0.6em !important;
+  font-weight: 700 !important;
 }
 
-@media screen and (max-width: 769px) {
-  .firstTitle {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
+.database {
+  background-color: rgba(18, 18, 18, 0.5);
 }
 
-.MobileFooter {
-  background: linear-gradient(0deg, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0.7777485994) 46%, rgba(0, 0, 0, 0) 100%) !important;
+.database table {
+  font-size: 0.6em !important;
+  color: #cac7bc;
+}
+
+.songTitle {
+  color: white;
+  font-weight: 800;
+}
+
+table p {
+  margin: 0 0 0 10px;
+}
+
+thead th {
+  padding: 0 0 20px 0 !important;
+}
+
+tr td {
+  padding-bottom: 10px !important;
+}
+
+.alignEndRow {
+  text-align: end !important;
+}
+
+.database button {
+  font-size: 2em !important;
+  color: white !important;
+}
+
+.database .PlayButton {
+  background: #1ED760 !important;
+  border-radius: 50% !important;
+  padding: 0px 5px 0px 10px !important;
+  border: 0;
+  color: black !important;
+  font-size: 2em !important;
 }
 
 body {
@@ -127,7 +152,7 @@ button {
   color: white;
   font-weight: bold;
     width: 100px;
-  
+
   border: 1px solid;
 }
 
