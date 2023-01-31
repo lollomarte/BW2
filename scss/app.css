@@ -67,6 +67,7 @@ body {
 /* margine p */
 .playlist-container-list-title {
   margin: 3px;
+  font-size: 12px;
 }
 
 /* bottone menù tendina colonna 1 */
@@ -103,6 +104,8 @@ div .descriptionName {
   background: #1ed760;
   color: black;
   border: 1px solid #1ed760;
+  font-weight: bold;
+    width: 100px;
 }
 
 button {
@@ -111,12 +114,21 @@ button {
   letter-spacing: 1px;
   font-size: medium;
   outline: none;
+  background: none;
+    color: white;
+}
+.three-points{
+  background: none;
+  color: white;
 }
 
 .savemusic {
-  /* background: none; */
-  color: black;
-  border: 1px solid white;
+  background: none;
+  color: white;
+  font-weight: bold;
+    width: 100px;
+  
+  border: 1px solid;
 }
 
 .LeftAsideContainer {
