@@ -5,14 +5,9 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
-.asideBar {
-  height: 100vh;
-}
-
 /* scroll colonna 1 */
 .playlist-container-list {
   overflow-y: scroll;
-  height: 100vh;
 }
 
 /* menù colonna 1 - levati pallini lista  */
@@ -26,6 +21,7 @@ body {
 .allblacks {
   background-color: black;
   color: white;
+  height: 100%;
 }
 
 /* margine p */
@@ -44,7 +40,7 @@ h6 {
 }
 
 .card-body .firstTitle {
-  font-size: 4em !important;
+  font-size: 2em !important;
 }
 
 div .friendName {
@@ -53,4 +49,8 @@ div .friendName {
 
 div .descriptionName {
   font-size: 0.6rem !important;
+}
+
+.mainCard p {
+  font-size: 0.7em !important;
 }/*# sourceMappingURL=app.css.map */
