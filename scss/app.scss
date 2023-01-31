@@ -41,6 +41,7 @@ h6 {
 .card-body {
   .firstTitle {
     font-size: 2em !important;
+    font-weight: bold;
   }
 }
 
@@ -65,6 +66,9 @@ font-size: 0.7em !important;
   background: #1ed760;
     color: black;
     border: 1px solid #1ed760;
+    font-weight: bold;
+    padding: 10px;
+    width: 100px;
 }
 button {
   border-radius: 20px;
@@ -75,8 +79,12 @@ button {
 }
 .savemusic{
     /* background: none; */
-    color: black;
+    color: rgb(255, 255, 255);
     border: 1px solid white;
+    font-weight: bold;
+    background: none;
+    padding: 10px;
+    width: 100px;
 }
 .LeftAsideContainer{
   height: 100vh;
@@ -100,6 +108,8 @@ button {
 }
 .first-song{
   background: linear-gradient(to right, #000000, #2f2f2f);
+  padding: 3em;
+    height: 40vh;
 }
 hr{
   margin: 0;
@@ -110,3 +120,12 @@ hr{
   background-repeat: no-repeat;
   background-size: cover;
 }
+.playlist-container-list-title {
+  margin: 3px;
+  font-size: small;
+}
+.three-points{
+  background: none;
+  color: white;
+}
+
