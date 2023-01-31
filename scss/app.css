@@ -54,3 +54,20 @@ div .friendName {
 div .descriptionName {
   font-size: 0.6rem !important;
 }/*# sourceMappingURL=app.css.map */
+.playmusic{
+  background: #1ed760;
+    color: black;
+    border: 1px solid #1ed760;
+}
+button {
+  border-radius: 20px;
+  border: none;
+  letter-spacing: 1px;
+  font-size: medium;
+  outline: none;
+}
+.savemusic{
+    /* background: none; */
+    color: black;
+    border: 1px solid white;
+}
