@@ -292,4 +292,8 @@ audio {
 
 ::-webkit-scrollbar-thumb:hover {
   background-color: rgb(125, 125, 125);
+}
+
+.CentralConatiner {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.96) 0%, rgba(4, 4, 4, 0.95) 32%, rgb(30, 30, 30) 88%);
 }/*# sourceMappingURL=app.css.map */
