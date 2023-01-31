@@ -1,6 +1,10 @@
 @charset "UTF-8";
 /** @format */
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap%27");
+.MobileFooter {
+  background: linear-gradient(0deg, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0.7777485994) 46%, rgba(0, 0, 0, 0) 100%) !important;
+}
+
 body {
   font-family: "Montserrat", sans-serif;
 }
@@ -57,21 +61,39 @@ div .descriptionName {
 
 .mainCard p {
   font-size: 0.7em !important;
+}
+
+.IconContainer {
+  display: flex;
+}
+@media screen and (min-width: 769px) {
+  .IconContainer {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .secondTitle, .MobileFooter {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 769px) {
+  .row .leftaside {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 769px) {
+  .rightAside, .topnav, .firstCol, .FirstCardTitle {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 769px) {
+  .firstTitle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 }/*# sourceMappingURL=app.css.map */
-.playmusic{
-  background: #1ed760;
-    color: black;
-    border: 1px solid #1ed760;
-}
-button {
-  border-radius: 20px;
-  border: none;
-  letter-spacing: 1px;
-  font-size: medium;
-  outline: none;
-}
-.savemusic{
-    /* background: none; */
-    color: black;
-    border: 1px solid white;
-}
