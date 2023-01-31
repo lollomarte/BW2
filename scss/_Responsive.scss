@@ -27,3 +27,8 @@
       align-items: center;
      }
   }
+  #music-player{
+    @media screen and (max-width: 769px) {
+      display: none !important;
+    }
+  }
