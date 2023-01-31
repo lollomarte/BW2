@@ -45,63 +45,34 @@
   color: white;
 }
 
-.headerAlbum .mainImage {
-  width: 100% !important;
-  box-shadow: 0px 0px 40px black;
+@media screen and (min-width: 769px) {
+  .secondTitle, .MobileFooter {
+    display: none !important;
+  }
 }
 
-.headerAlbum h1 {
-  font-size: 5em !important;
-  font-weight: 800 !important;
+@media screen and (max-width: 769px) {
+  .row .leftaside {
+    display: none !important;
+  }
 }
 
-.headerAlbum p {
-  font-size: 0.6em !important;
-  font-weight: 700 !important;
+@media screen and (max-width: 769px) {
+  .rightAside, .topnav, .firstCol, .FirstCardTitle {
+    display: none !important;
+  }
 }
 
-.database {
-  background-color: rgba(18, 18, 18, 0.5);
+@media screen and (max-width: 769px) {
+  .firstTitle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 
-.database table {
-  font-size: 0.6em !important;
-  color: #cac7bc;
-}
-
-.songTitle {
-  color: white;
-  font-weight: 800;
-}
-
-table p {
-  margin: 0 0 0 10px;
-}
-
-thead th {
-  padding: 0 0 20px 0 !important;
-}
-
-tr td {
-  padding-bottom: 10px !important;
-}
-
-.alignEndRow {
-  text-align: end !important;
-}
-
-.database button {
-  font-size: 2em !important;
-  color: white !important;
-}
-
-.database .PlayButton {
-  background: #1ED760 !important;
-  border-radius: 50% !important;
-  padding: 0px 5px 0px 10px !important;
-  border: 0;
-  color: black !important;
-  font-size: 2em !important;
+.MobileFooter {
+  background: linear-gradient(0deg, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0.7777485994) 46%, rgba(0, 0, 0, 0) 100%) !important;
 }
 
 body {
@@ -131,7 +102,7 @@ body {
 /* margine p */
 .playlist-container-list-title {
   margin: 3px;
-}
+  font-size: small;}
 
 /* bottone menù tendina colonna 1 */
 .bottone {
@@ -167,6 +138,9 @@ div .descriptionName {
   background: #1ed760;
   color: black;
   border: 1px solid #1ed760;
+  font-weight: bold;
+  margin-top: 10px;
+  width: 80px;
 }
 
 button {
@@ -179,8 +153,12 @@ button {
 
 .savemusic {
   /* background: none; */
-  color: black;
-  border: 1px solid white;
+  color: rgb(255, 255, 255);
+  border: 1px solid rgb(0, 0, 0);
+  background: none;
+  border: solid 1px;
+  font-weight: bold;
+  width: 80px;
 }
 
 .LeftAsideContainer {
@@ -206,9 +184,58 @@ button {
 }
 
 .first-song {
-  background: linear-gradient(to right, #000000, #2f2f2f);
+  background: linear-gradient(to right, #000000, #000000 80%, #2d2d2d);
 }
 
 hr {
   margin: 0;
 }/*# sourceMappingURL=app.css.map */
+
+.mainCard{
+  
+    
+      margin-left: -95px;
+      
+      margin-top: 35px;
+  }
+
+.three-points{
+  background: none;
+  color: white;
+}
+.menu-element{
+  font-weight: bold;
+}
+#music-player {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #333;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn {
+  background-color: transparent;
+  border-color: white;
+  color: white;
+  margin: 0 10px;
+}
+
+audio {
+  width: 100%;
+}
+
+#progress-bar {
+  width: 60%;
+  height: 5px;
+  background-color: white;
+  margin: 20px 10px;
+}
+
+#progress {
+  height: 100%;
+  background-color: white;
+}
