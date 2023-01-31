@@ -148,3 +148,26 @@ button {
 hr {
   margin: 0;
 }/*# sourceMappingURL=app.css.map */
+.mainCard{
+  margin: 5%;
+}
+#music-player {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #333;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn {
+  background-color: transparent;
+  border-color: white;
+  color: white;
+}
+
+audio {
+  width: 100%;
+}
