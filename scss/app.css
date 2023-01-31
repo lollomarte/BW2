@@ -11,8 +11,11 @@ body {
 
 /* scroll colonna 1 */
 .playlist-container-list {
-  overflow-y: scroll;
-}
+    overflow-y: scroll; /* attiva lo scorrimento solo per l'asse y */
+    height: 100vh;
+ 
+  }
+  
 
 /* menù colonna 1 - levati pallini lista  */
 .menu {
@@ -20,12 +23,14 @@ body {
   margin: 0;
   padding: 0;
 }
-
+.menu-element{
+  margin-bottom: 10px;
+}
 /* menù colonna 1 nero con testo bianco */
 .allblacks {
   background-color: black;
   color: white;
-  height: 100%;
+  
 }
 
 /* margine p */
