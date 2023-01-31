@@ -116,6 +116,7 @@ h6 {
 
 .card-body .firstTitle {
   font-size: 2em !important;
+  font-weight: bold;
 }
 
 div .rightAsideTitle {
