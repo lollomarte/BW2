@@ -32,3 +32,23 @@
       display: none !important;
     }
   }
+  .centralSection {
+    @media screen and (max-width: 769px) {
+      width: 100%;
+    }
+    .headerAlbum {
+      @media screen and (max-width: 769px) {
+        flex-direction: column;
+        
+      }
+      .imgContainerAlbum {
+        align-self: center;
+        img {
+          
+        }
+      }
+      h1 {
+        font-size: 2em !important;
+      }
+    }
+  }
