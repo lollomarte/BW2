@@ -15,7 +15,7 @@ window.onload = homeAlbum();
 const fetchArray = ["75621062", "75621062", "75621062", "75621062", "75621062", "75621062"];
 
 async function homeMidCards() {
-  for (i = 0; i < fetchArray.length; i++) {
+  for (let i = 0; i < fetchArray.length; i++) {
     let idCard;
     idCard = fetchArray[i];
     let fetchId = 'https://striveschool-api.herokuapp.com/api/deezer/album/' + idCard;
@@ -83,9 +83,9 @@ https: {
 // </div>
 // </div> 
 
-const PreferiteFetch = ["6041124", "6041124", "6041124", "6041124", "6041124", "6041124"];
+const PreferiteFetch = ["6041124", "6041124", "6041124", "6041124", "6041124"];
 async function homeEndPage() {
-    for (i = 0; i < PreferiteFetch.length; i++) {
+    for (let i = 0; i < PreferiteFetch.length; i++) {
       let PreferiteId;
       PreferiteId = PreferiteFetch[i];
       let PrefIdFetch = 'https://striveschool-api.herokuapp.com/api/deezer/album/' + PreferiteId;
