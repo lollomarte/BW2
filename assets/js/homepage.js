@@ -1,7 +1,7 @@
 async function homeAlbum() {
   const fetchSec2 = await fetch("https://striveschool-api.herokuapp.com/api/deezer/search?q=origins");
   const HomeFetch = await fetchSec2.json();
-
+console.log(HomeFetch)
   const homeimg = document.querySelector(".homeimg"); // immagine
   homeimg.src = HomeFetch.data[0].album.cover_big;
   const AlbumTitle = document.querySelector(".TitoloCanzone"); // canzone
@@ -83,7 +83,7 @@ https: {
 // </div>
 // </div> 
 
-const PreferiteFetch = ["75621062", "75621062", "75621062", "75621062", "75621062", "75621062"];
+const PreferiteFetch = ["6041124", "6041124", "6041124", "6041124", "6041124", "6041124"];
 async function homeEndPage() {
     for (i = 0; i < PreferiteFetch.length; i++) {
       let PreferiteId;
