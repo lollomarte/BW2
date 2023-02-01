@@ -71,3 +71,39 @@ https: {
                 </div>
               </div> */
 }
+
+
+//  <div class="col-12 col-md-2 col-lg-2 my-4">
+// <div class="card" style="width: 100%">
+// <img src="./assets/img/TOPITALIA2022.jpeg" class="card-img-top" alt="..." />
+// <div class="card-body">
+//   <h5 class="card-title">Top 2022</h5>
+//   <p class="card-text">Ascolta il suo nuovo singolo!</p>
+// </div>
+// </div>
+// </div> 
+
+const PreferiteFetch = ["75621062", "75621062", "75621062", "75621062", "75621062", "75621062"];
+async function homeEndPage() {
+    for (i = 0; i < PreferiteFetch.length; i++) {
+      let PreferiteId;
+      PreferiteId = PreferiteFetch[i];
+      let PrefIdFetch = 'https://striveschool-api.herokuapp.com/api/deezer/album/' + PreferiteId;
+      const singlePreferite = await fetch(PrefIdFetch);
+      const singlePreferiteJson = await singlePreferite.json();
+      const homeEndPage = document.querySelector(".homeEndPage");
+      homeEndPage.innerHTML =
+       homeEndPage.innerHTML +
+       `<div class="col-12 col-md-2 col-lg-2 my-4">
+       <div class="card" style="width: 100%">
+       <img src='${singlePreferiteJson.cover_big}' class="card-img-top" alt="..." />
+       <div class="card-body">
+         <h5 class="card-title">${singlePreferiteJson.title}</h5>
+         <p class="card-text">${singlePreferiteJson.artist.name}</p>
+       </div>
+       </div>
+       </div> `;
+    }
+
+} 
+homeEndPage();
