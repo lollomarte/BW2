@@ -505,24 +505,64 @@
         </div>
       </div>
     </footer>
-    <div id="music-player">
-      <audio id="audio-element"></audio>
-      <button id="shuffle" class="btn btn-light">
-        <i class="fa fa-random"></i>
-      </button>
-      <button id="prev-track" class="btn btn-light">
-        <i class="fa fa-backward"></i>
-      </button>
-      <button id="play-pause" class="btn btn-light">
-        <i class="fa fa-play"></i>
-      </button>
-      <button id="next-track" class="btn btn-light">
-        <i class="fa fa-forward"></i>
-      </button>
-      <div id="progress-bar">
-        <div id="progress"></div>
-      </div>
-    </div>
+    
+  <aside class="mediaPlayer">
+    <section class="container-fluid player">
+      <div class="d-flex justify-content-center">
+        <div id="txt" class="d-flex align-items-center">
+          <img id="cover-play-song" src="../assets/img/SVG_Circle.svg.png" alt="" class="img-fluid player-img" />
+          <span>
+            <h4 id="title-play-song" class="m-0 player-title">
+            </h4>
+            <p id="artist-play-song" class="m-0"></p>
+        </div>
+        </span>
+        <div class="d-flex align-items-center">
+          <i class="bi bi-heart"></i>
+        </div>
+
+        <div class="d-flex align-items-center justify-content-center flex-column player-controller">
+          <div class="d-flex align-items-center justify-content-center gap-3">
+            <i class="random bi bi-shuffle d-none d-xl-block"></i>
+            <i class="bi bi-skip-start-fill d-none d-xl-block"></i>
+            <i id="play" class="bi bi-play-fill"></i>
+            <i class="bi bi-skip-end-fill d-none d-xl-block"></i>
+            <i id="repeat" class="bi bi-repeat d-none d-xl-block"></i>
+          </div>
+
+          <div class="d-flex justify-content-center align-items-center">
+            <span id="time-inizio" class="d-none d-xl-block">1:30</span>
+
+            <p class="m-0 d-none d-xl-block">
+              <svg id="music-bar" height="24" width="500">
+                <line x1="10" y1="12" x2="490" y2="12" style="stroke: gray; stroke-width: 4; stroke-linecap: round" />
+                <line id="linea-play" x1="10" y1="12" x2="10" y2="12" style="
+                          stroke: white;
+                          stroke-width: 4;
+                          stroke-linecap: round;
+                        " />
+              </svg>
+            </p>
+
+            <span id="time-fine" class="d-none d-xl-block">0:00</span>
+          </div>
+
+          <audio class="d-none"></audio>
+        </div>
+
+        <div class="d-flex align-items-center justify-content-end">
+          <i class="bi bi-mic d-none d-xl-block"></i>
+          <i class="bi bi-hdd-stack d-none d-xl-block"></i>
+          <i id="muted" class="bi bi-volume-up d-none d-xl-block"></i>
+          <svg id="volum-bar" class="d-none d-xl-block" height="24" width="100">
+            <line x1="2" y1="12" x2="98" y2="12" style="stroke: gray; stroke-width: 4; stroke-linecap: round" />
+            <line x1="2" y1="12" x2="98" y2="12" style="stroke: white; stroke-width: 4; stroke-linecap: round" />
+          </svg>
+          <i class="bi bi-arrows-angle-expand d-none d-xl-block"></i>
+        </div>
+      </div>  
+    </section>
+  </aside>
 
     <script src="./assets/js/homepage.js"></script>
     <script
