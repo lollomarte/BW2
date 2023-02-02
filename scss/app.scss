@@ -178,3 +178,53 @@ audio {
   .CentralContainer {
     background: linear-gradient(0deg, rgb(0 0 0 / 96%) 0%, rgb(4 4 4 / 95%) 32%, rgb(30 30 30) 88%);
   }
+
+.mediaPlayer{
+  position: sticky;
+  bottom: 0;
+}
+.player {
+  background-color: #191414;
+  border-radius: 10px;
+}
+
+/* #cover-play-song {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-right: 20px;
+} */
+
+#title-play-song, #artist-play-song {
+  color: #fff;
+  margin: 0;
+}
+
+
+.random, .bi-shuffle, .bi-skip-start-fill, .bi-play-fill, .bi-skip-end-fill, .bi-repeat, .bi-mic, .bi-hdd-stack, .bi-pc-display, .bi-volume-up, .bi-arrows-angle-expand {
+  color: #fff;
+  font-size: 24px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+#time-inizio, #time-fine {
+  color: #fff;
+  font-size: 14px;
+  margin: 0 10px;
+}
+
+.bi-play-fill{
+  border-radius: 50%;
+  background: white;
+  color: black;
+  padding: 4px;
+}
+.bi-repeat:active {
+ color:#1ed760;
+}
+.bi-shuffle:active {
+  color: #1ed760;
+}
+.bi-heart{
+  color: white;
+}
