@@ -367,7 +367,7 @@ audio {
 }
 
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 5px;
   height: 5px;
   background-color: black;
 }
@@ -392,7 +392,6 @@ audio {
 
 .player {
   background-color: #191414;
-  border-radius: 10px;
 }
 
 /* #cover-play-song {
@@ -476,5 +475,25 @@ audio {
 }
 
 .SpanLeftAside:hover {
+  color: white;
+}
+
+.leftMusic {
+  bottom: 0;
+  position: fixed;
+  margin-left: 80%;
+  margin-bottom: 20px;
+}
+
+.cuoreMusic {
+  position: fixed;
+  bottom: 0;
+  margin-right: 80%;
+  margin-bottom: 20px;
+}
+
+#progress {
+  width: 100%;
+  height: 20px;
   color: white;
 }/*# sourceMappingURL=app.css.map */
