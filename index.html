@@ -19,7 +19,7 @@
       <div class="row">
         <div class="col-2 leftaside px-0">
           <div class="position-sticky top-0 LeftAsideContainer">
-            <!--Inizio Navbar-->
+            <!--Start Navbar-->
             <div class="allblacks">
               <nav>
                 <ul class="menu">
@@ -110,7 +110,10 @@
             </div>
           </div>
         </div>
-        <div class="col-12 col-md-9 col-lg-9 content pt-2 CentralContainer">
+        <!-- End Navbar -->
+
+        <!-- End Top Icon -->
+        <div class="col-12 col-md-8 col-lg-8 content pt-2 CentralContainer">
           <div class="col-12 d-flex justify-content-between align-items-center topnav">
             <div>
               <button type="button" class="rounded-circle bg-black border-0 px-1">
@@ -140,20 +143,58 @@
               </li>
             </ul>
           </div>
+          <!-- End Top Icon -->
+
+          <!-- Start Homepage Main Card -->
           <div class="col-12 firstCol">
+            <div
+              class="row headerAlbum mx-2 my-4 d-flex align-items-end py-3"
+              style="background: linear-gradient(0.05turn, #000000 50%, #333333) !important"
+            >
+              <div class="col-sm-4 col-md-4 col-lg-4 col-xl-2 imgContainerAlbum align-self-center" style="width:225px!important; height: 225px!important;">
+                <img src="./assets/img/pinkfloyd.jpeg" class="mainImage homeimg pt-2 mt-1" alt="photo" />
+              </div>
+              <div class="col-sm-12 col-md-6 col-lg-6 col-xl-8 mainCard">
+                <p class="m-0 text-light">ALBUM</p>
+                <h1 class="mb-3 TitoloCanzone text-light">song title</h1>
+                <p class="ArtistName text-light">artist name</p>
+                <p class="text-light">ascolta il loro più grande successo!</p>
+                <div class="d-flex">
+                  <button class="playmusic me-4">Play</button>
+                  <button class="savemusic me-1">Salva</button>
+                  <button
+                    class="bg-transparent border-0 ps-3"
+                    type="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    <i class="bi bi-three-dots text-light" style="font-size: 1.5em"></i>
+                  </button>
+                  <ul class="dropdown-menu bg-secondary">
+                    <li><a class="dropdown-item" href="#">Aggiungi in coda</a></li>
+                    <li><a class="dropdown-item" href="#">Vai a radio dell'artista</a></li>
+                    <li><a class="dropdown-item" href="#">Aggiungi a La tua libreria</a></li>
+                    <li><a class="dropdown-item" href="#">Aggiungi alla tua playlist</a></li>
+                    <li><a class="dropdown-item" href="#">Condividi</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- <div class="col-12 firstCol">
             <div class="card mt-2" style="max-width: 100%">
               <div class="first-song row g-0">
                 <div class="col-md-4">
                   <img
                     src="./assets/img/pinkfloyd.jpeg"
                     class="homeimg img-fluid rounded-start py-3 px-2"
-                    style="width: 70%"
                     alt="foto iniziale"
-                  />
-                </div>
-                <div class="col-md-8">
-                  <div class="card-body mainCard">
-                    <h6 class="my-0">ALBUM</h6>
+                    />
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body mainCard">
+                      <h6 class="my-0">ALBUM</h6>
                     <h5 class="TitoloCanzone card-title firstTitle my-0">ANOTHER BRICK IN THE WALL</h5>
                     <p class="ArtistName card-text my-0">Pink Floyd</p>
                     <p class="card-text my-0 tb-2">
@@ -179,7 +220,10 @@
                 </div>
               </div>
             </div>
-          </div>
+          </div> -->
+          <!-- End Homepage Main Card -->
+
+          <!--Start card placeholder -->
           <div class="col-12 text-white fs-2 fw-bold firstTitle">
             <div>Buonasera</div>
             <div class="IconContainer">
@@ -193,7 +237,7 @@
             <p class="ms-4">Podcast e show</p>
           </div>
           <div class="col-12">
-            <!-- card placeholder -->
+            <!--End card placeholder -->
 
             <div class="row midCardsHits">
               <!-- <div class="col-6 col-6 col-sm-6 col-md-4">
@@ -389,50 +433,56 @@
         <!-- End card placeholder -->
 
         <!-- Start Aside Card -->
-        <div class="col-1 rightAside bg-black text-white px-0">
-          <div class="position-sticky d-flex top-0 justify-content-evenly mb-3 mt-1 rightAsideTitle">
-            <p class="inline">Attività amici</p>
-            <div><i class="bi bi-person-plus"></i><i class="bi bi-x-lg"></i></div>
-          </div>
-          <div class="">
-            <div class="d-flex justify-content-evenly align-items-start">
-              <img
-                src="./assets/img/portraitEsempio.jpg"
-                alt="portrait"
-                style="width: 20px; height: 20px; border-radius: 50%"
-              />
-              <div class="d-flex flex-column">
-                <p class="friendName p-0 m-0">nome mio</p>
-                <p class="descriptionName p-0 m-0">ciaone</p>
-                <p class="descriptionName p-0 m-0">fine linea</p>
-              </div>
-              <p class="descriptionName">ora</p>
+        <div class="col-2 rightAside bg-black text-white px-0">
+          <div class="position-sticky top-0">
+            <div class="d-flex justify-content-between py-3 rightAsideTitle">
+              <p class="inline ps-5">Attività amici</p>
+              <div><i class="bi bi-person-plus pe-3"></i><i class="bi bi-x-lg pe-5"></i></div>
             </div>
-            <div class="d-flex justify-content-evenly align-items-start">
-              <img
-                src="./assets/img/portraitEsempio.jpg"
-                alt="portrait"
-                style="width: 20px; height: 20px; border-radius: 50%"
-              />
-              <div class="d-flex flex-column">
-                <p class="friendName p-0 m-0">nome mio</p>
-                <p class="descriptionName p-0 m-0">ciaone</p>
-                <p class="descriptionName p-0 m-0">fine linea</p>
+            <div class="d-flex justify-content-around align-items-start pb-4">
+              <div class="d-flex">
+                <img
+                  src="./assets/img/Cleopatra.jpg"
+                  alt="portrait"
+                  style="width: 50px; height: 50px; border-radius: 50%"
+                />
+                <div class="d-flex flex-column ms-4">
+                  <p class="friendName p-0 m-0">Cleopatra</p>
+                  <p class="descriptionName p-0 m-0">on Webcam - TikTok</p>
+                  <p class="descriptionName p-0 m-0">Umbrella</p>
+                </div>
               </div>
-              <p class="descriptionName">ora</p>
+              <p class="descriptionName">2040 anni</p>
             </div>
-            <div class="d-flex justify-content-evenly align-items-start">
-              <img
-                src="./assets/img/portraitEsempio.jpg"
-                alt="portrait"
-                style="width: 20px; height: 20px; border-radius: 50%"
-              />
-              <div class="d-flex flex-column">
-                <p class="friendName p-0 m-0">nome mio</p>
-                <p class="descriptionName p-0 m-0">ciaone</p>
-                <p class="descriptionName p-0 m-0">fine linea</p>
+            <div class="d-flex justify-content-around align-items-start pb-4">
+              <div class="d-flex">
+                <img
+                  src="./assets/img/Magalli.jpg"
+                  alt="portrait"
+                  style="width: 50px; height: 50px; border-radius: 50%"
+                />
+                <div class="d-flex flex-column ms-4">
+                  <p class="friendName p-0 m-0">Giancarlo Magalli</p>
+                  <p class="descriptionName p-0 m-0">Presiede la repubblica</p>
+                  <p class="descriptionName p-0 m-0">Bella Ciao</p>
+                </div>
               </div>
-              <p class="descriptionName">ora</p>
+              <p class="descriptionName">6 ore</p>
+            </div>
+            <div class="d-flex justify-content-around align-items-start pb-4">
+              <div class="d-flex">
+                <img
+                  src="./assets/img/Meloni.jpg"
+                  alt="portrait"
+                  style="width: 50px; height: 50px; border-radius: 50%"
+                />
+                <div class="d-flex flex-column ms-4">
+                  <p class="friendName p-0 m-0">Giorgia Meloni</p>
+                  <p class="descriptionName p-0 m-0">Play Animal Crossing</p>
+                  <p class="descriptionName p-0 m-0">Zitti e Buoni</p>
+                </div>
+              </div>
+              <p class="descriptionName">12 ore</p>
             </div>
           </div>
         </div>
@@ -440,7 +490,11 @@
     </div>
     <footer class="position-sticky bottom-0 bg-black MobileFooter">
       <div class="text-white d-flex justify-content-evenly py-2">
-        <a href="./index.html"><div class="d-flex flex-column align-items-center"><i class="bi bi-house-door fs-1"></i><span>Home</span></div></a>
+        <a href="./index.html"
+          ><div class="d-flex flex-column align-items-center">
+            <i class="bi bi-house-door fs-1"></i><span>Home</span>
+          </div></a
+        >
         <div class="d-flex flex-column align-items-center"><i class="bi bi-search fs-1"></i><span>Cerca</span></div>
         <div class="d-flex flex-column align-items-center">
           <i class="bi bi-music-note-list fs-1"></i><span>Libreria</span>
