@@ -161,11 +161,6 @@ body {
   height: 100%;
 }
 
-/* margine p */
-.playlist-container-list-title {
-  margin: 3px;
-}
-
 /* bottone menù tendina colonna 1 */
 .bottone {
   background-color: black;
@@ -264,8 +259,10 @@ hr {
 }
 
 .playlist-container-list-title {
-  margin: 3px;
-  font-size: small;
+  margin-top: 3px;
+  margin-bottom: 3px;
+  font-size: 0.8em;
+  color: #cac7bc;
 }
 
 .three-points {
@@ -323,4 +320,45 @@ audio {
 
 .CentralContainer {
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.96) 0%, rgba(4, 4, 4, 0.95) 32%, rgb(30, 30, 30) 88%);
+}
+
+.IconTopLeftAside {
+  font-size: 1.4em;
+}
+
+.HeartIconContainer {
+  background: linear-gradient(345deg, rgb(255, 255, 255) 0%, rgb(163, 149, 255) 28%, rgb(89, 82, 255) 40%);
+  padding: 0px 6px;
+  border-radius: 3px;
+  height: 23px;
+  width: 23px;
+}
+.HeartIconContainer i {
+  font-size: 0.7em;
+}
+
+.BookmakerIconContainer {
+  padding: 0px 6px;
+  border-radius: 3px;
+  background-color: #0f531b;
+  height: 23px;
+  width: 23px;
+}
+.BookmakerIconContainer i {
+  font-size: 0.7em;
+  color: #24a73d;
+}
+
+.SpanLeftAside {
+  font-size: 0.8em;
+  font-weight: bold;
+  color: #cac7bc;
+}
+
+.SpanLeftAside {
+  cursor: pointer;
+}
+
+.SpanLeftAside:hover {
+  color: white;
 }/*# sourceMappingURL=app.css.map */
