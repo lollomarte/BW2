@@ -3,7 +3,7 @@
 @import "./Responsive";
 @import "./MobileFooter";
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap%27");
-@import 'album';
+@import "album";
 
 body {
   font-family: "Montserrat", sans-serif;
@@ -14,12 +14,14 @@ body {
   overflow-y: scroll;
   max-height: 75vh;
 }
+
 /* menù colonna 1 - levati pallini lista  */
 .menu {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
+
 /* menù colonna 1 nero con testo bianco */
 .allblacks {
   background-color: black;
@@ -33,9 +35,14 @@ body {
   color: white;
 }
 
+.firstCol {
+  background: linear-gradient(#000000 #222222) !important;
+}
+
 h6 {
   font-size: 0.7em !important;
 }
+
 .card-body {
   .firstTitle {
     font-size: 2em !important;
@@ -43,31 +50,26 @@ h6 {
   }
 }
 
-div .rightAsideTitle {
+.rightAside {
+  font-size: 0.8em !important;
+  .descriptionName {
+    font-size: 0.7em !important;
+  }
+
+}
+.mainCard p {
   font-size: 0.7em !important;
 }
 
-div .friendName {
-    font-size: 0.8em !important;
-}
-
-div .descriptionName {
-    font-size: 0.6em !important;
-}
-
-.mainCard p{
-font-size: 0.7em !important;
-
-}
-
-.playmusic{
+.playmusic {
   background: #1ed760;
-    color: black;
-    border: 1px solid #1ed760;
-    font-weight: bold;
-    padding: 10px;
-    width: 100px;
+  color: black;
+  border: 1px solid #1ed760;
+  font-weight: bold;
+  padding: 10px;
+  width: 100px;
 }
+
 button {
   border-radius: 20px;
   border: none;
@@ -75,18 +77,21 @@ button {
   font-size: medium;
   outline: none;
 }
-.savemusic{
-    /* background: none; */
-    color: rgb(255, 255, 255);
-    border: 1px solid white;
-    font-weight: bold;
-    background: none;
-    padding: 10px;
-    width: 100px;
+
+.savemusic {
+  /* background: none; */
+  color: rgb(255, 255, 255);
+  border: 1px solid white;
+  font-weight: bold;
+  background: none;
+  padding: 10px;
+  width: 100px;
 }
-.LeftAsideContainer{
+
+.LeftAsideContainer {
   height: 100vh;
 }
+
 ::-webkit-scrollbar {
   width: 10px;
   background-color: black;
@@ -100,31 +105,36 @@ button {
   background-color: rgb(125, 125, 125);
 }
 
-.card{
+.card {
   background: #2f2f2f;
   color: white;
 }
-.first-song{
+
+.first-song {
   background: linear-gradient(to right, #000000, #2f2f2f);
   padding: 3em;
-    height: 40vh;
+  height: 40vh;
 }
-hr{
+
+hr {
   margin: 0;
 }
+
 .MainContainer {
   background-image: url(../assets/img/concerto-musicale.jpg);
   height: 400px;
   background-repeat: no-repeat;
   background-size: cover;
 }
+
 .playlist-container-list-title {
   margin-top: 3px;
   margin-bottom: 3px;
   font-size: $FontForAll;
   color: $FontColor;
 }
-.three-points{
+
+.three-points {
   background: none;
   color: white;
 }
@@ -162,17 +172,18 @@ audio {
   height: 100%;
   background-color: rgb(255, 255, 255);
 }
+
 ::-webkit-scrollbar {
   width: 10px;
   height: 5px;
   background-color: black;
-  }
-  
-  ::-webkit-scrollbar-thumb {
+}
+
+::-webkit-scrollbar-thumb {
   background-color: rgb(0, 0, 0);
-  }
-  
-  ::-webkit-scrollbar-thumb:hover {
+}
+
+::-webkit-scrollbar-thumb:hover {
   background-color: rgb(125, 125, 125);
   }
   .CentralContainer {
