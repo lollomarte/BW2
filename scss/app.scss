@@ -178,3 +178,22 @@ audio {
   .CentralConatiner {
     background: linear-gradient(0deg, rgb(0 0 0 / 96%) 0%, rgb(4 4 4 / 95%) 32%, rgb(30 30 30) 88%);
   }
+
+  .iconVerde {
+    background-color: rgb(9, 71, 9);
+    color: rgb(9, 189, 9);
+    padding: 1px 5px;
+    border-radius: 0.25em;
+  }
+  .braniLike{
+    background: linear-gradient(to bottom right, rgb(79, 10, 198), white);
+    color: white;
+    padding: 1px 5px;
+    border-radius: 0.25em;
+  }
+  .simplePlus{
+    background-color: grey;
+    color: black;
+    padding: 1px 5px;
+    border-radius: 0.25em;
+  }
