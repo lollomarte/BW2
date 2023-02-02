@@ -25,7 +25,7 @@ async function ArtistNsmeFetch() {
     const tbody = document.querySelector(".TbodyArtist");
     tbody.innerHTML =
       tbody.innerHTML +
-      `<tr class="mb-2">
+      `<tr class="mb-2 SpanLeftAsideBox">
       <td class="numeroList">${i + 1}</td>
       <td class="ps-2">
         <img src="${song.album.cover_big}" width="40px" height="40px"/>

@@ -27,14 +27,14 @@ async function albumFetch() {
     const tbody = document.querySelector(".albumHeader tbody");
     tbody.innerHTML = 
     tbody.innerHTML +
-    `<tr class="mb-2">
-               <td class="alignEndRow">${i + 1}</td>
+    `<tr class="mb-2 SpanLeftAsideBox"">
+               <td class="fontSetterAlbum alignEndRow">${i + 1}</td>
                <td>
-                 <p class="songTitle">${song.title}</p>
-                 <p class="songAuthor">${song.artist.name}</p>
+                 <a href="#"><p class="fontSetterAlbum">${song.title}</p></a>
+                 <a href="#"><p class="fontSetterAlbum SpanLeftAside">${song.artist.name}</p></a>
                </td>
-               <td>${song.rank}</td>
-               <td>${timer}</td>
+               <td class="fontSetterAlbum">${song.rank}</td>
+               <td class="fontSetterAlbum">${timer}</td>
              </tr>`
 });
 

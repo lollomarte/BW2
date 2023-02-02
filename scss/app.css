@@ -104,6 +104,10 @@
   font-weight: 700 !important;
 }
 
+.fontSetterAlbum {
+  font-size: 1.2em !important;
+}
+
 .database {
   background-color: rgba(18, 18, 18, 0.5);
 }
@@ -139,13 +143,21 @@ tr td {
   color: white !important;
 }
 
-.database .PlayButton {
-  background: #1ED760 !important;
+.PlayButton {
+  background: #2ac25f !important;
   border-radius: 50% !important;
-  padding: 0px 5px 0px 10px !important;
+  padding: 0px 3px 3px 18px !important;
   border: 0;
   color: black !important;
   font-size: 2em !important;
+}
+
+.PlayButton {
+  cursor: pointer;
+}
+
+.PlayButton:hover {
+  background: #57ec8b !important;
 }
 
 .CardSearchMobile {
@@ -247,8 +259,10 @@ h6 {
   font-size: 0.8em !important;
   font-weight: 800 !important;
 }
-.fontSetter .descriptionName {
+
+.descriptionName {
   font-size: 0.7em !important;
+  color: #cac7bc !important;
 }
 
 .greyWrite {
@@ -258,8 +272,17 @@ h6 {
 }
 
 .cardColor {
-  background: #2F2F2F !important;
+  background: #2f2f2f !important;
   color: white;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.youAlsoLike {
+  border-radius: 20px !important;
 }
 
 .mainCard p {
@@ -412,29 +435,44 @@ audio {
   border-radius: 50%;
   margin-right: 20px;
 } */
-#title-play-song, #artist-play-song {
+#title-play-song,
+#artist-play-song {
   color: #fff;
   margin: 0;
 }
 
-.random, .bi-shuffle, .bi-skip-start-fill, .bi-play-fill, .bi-skip-end-fill, .bi-repeat, .bi-mic, .bi-hdd-stack, .bi-pc-display, .bi-volume-up, .bi-arrows-angle-expand {
+.random,
+.bi-shuffle,
+.bi-skip-start-fill,
+.bi-play-fill,
+.bi-skip-end-fill,
+.bi-repeat,
+.bi-mic,
+.bi-hdd-stack,
+.bi-pc-display,
+.bi-volume-up,
+.bi-arrows-angle-expand {
   color: #fff;
   font-size: 24px;
   margin-right: 10px;
   cursor: pointer;
 }
 
-#time-inizio, #time-fine {
+#time-inizio,
+#time-fine {
   color: #fff;
   font-size: 14px;
   margin: 0 10px;
 }
 
-.bi-play-fill {
-  border-radius: 50%;
-  background: white;
-  color: black;
-  padding: 4px;
+.playWhite {
+  background: white !important;
+  border-radius: 50% !important;
+  padding: 3px 8px 0px 12px !important;
+  margin: 15px 0;
+  border: 0;
+  color: black !important;
+  font-size: 2em !important;
 }
 
 .bi-repeat:active {
@@ -479,7 +517,7 @@ audio {
 .SpanLeftAside {
   font-size: 0.8em;
   font-weight: bold;
-  color: #cac7bc;
+  color: #cac7bc !important;
 }
 
 .SpanLeftAside {
@@ -487,7 +525,22 @@ audio {
 }
 
 .SpanLeftAside:hover {
-  color: white;
+  color: white !important;
+}
+
+.SpanLeftAsideBox {
+  font-size: 0.8em;
+  font-weight: bold;
+  color: white !important;
+}
+
+.SpanLeftAsideBox {
+  cursor: pointer;
+}
+
+.SpanLeftAsideBox:hover {
+  background-color: #777777;
+  border-radius: 5px;
 }
 
 .leftMusic {
