@@ -418,13 +418,6 @@ audio {
   margin: 0 10px;
 }
 
-.bi-play-fill {
-  border-radius: 50%;
-  background: white;
-  color: black;
-  padding: 4px;
-}
-
 .bi-repeat:active {
   color: #1ed760;
 }
@@ -500,17 +493,18 @@ audio {
   padding: 10px;
 }
 
-.Porvabutton {
-  background-color: #4caf50;
+.Provabutton {
+  background-color: white;
   border: none;
-  color: white;
-  padding: 15px 32px;
+  color: black;
+  padding: 10px 18px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
   margin: 4px 2px;
   cursor: pointer;
+  border-radius: 50%;
 }
 
 input[type=range] {
