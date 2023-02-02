@@ -1,3 +1,9 @@
 .MobileFooter {
-    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.7777485994397759) 46%, rgba(0,0,0,0) 100%) !important;
+    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.88) 46%, rgba(0,0,0,0) 100%) !important;
+    a {
+        text-decoration: none;
+    }
+}
+.IconFootetCont{
+    color: $FontColor
 }
