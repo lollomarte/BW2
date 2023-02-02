@@ -109,7 +109,7 @@
 }
 
 .database table {
-  font-size: 0.6em !important;
+  font-size: 0.8em !important;
   color: #cac7bc;
 }
 
@@ -245,16 +245,21 @@ h6 {
 
 .fontSetter {
   font-size: 0.8em !important;
-  font-weight: 800;
+  font-weight: 800 !important;
 }
 .fontSetter .descriptionName {
   font-size: 0.7em !important;
 }
 
+.greyWrite {
+  font-weight: 600 !important;
+  font-size: 0.7em !important;
+  color: #cac7bc !important;
+}
+
 .cardColor {
   background: #2F2F2F !important;
   color: white;
-  font-size: 0.8em;
 }
 
 .mainCard p {

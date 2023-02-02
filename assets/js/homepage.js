@@ -29,15 +29,15 @@ async function homeMidCards() {
                 <div class="card mb-3 cardColor" style="max-width: 100%">
                   <div class="row g-0" style="height: 100px">
                     <div class="col-md-4">
-                      <img
+                    <a href="#"><img
                         src='${singleAlbumJson.cover_big}'
                         class="img-fluid rounded-start" style="height: 100px"
                         alt="photo"
-                      />
+                      /></a>
                     </div>
                     <div class="col-md-8 d-flex justify-content-center align-item-center">
-                      <div class=" card-body">
-                        <h5 class="card-title fontSetter">${singleAlbumJson.title}</h5>
+                      <div class=" card-body d-flex align-items-center">
+                      <a href="#" style="text-decoration:none; color:white;"><h5 class="card-title fontSetter ps-2 mb-0">${singleAlbumJson.title}</h5></a>
                       </div>
                     </div>
                   </div>
@@ -94,14 +94,14 @@ async function homeEndPage() {
     homeEndPage.innerHTML =
       homeEndPage.innerHTML +
       `<div class="col-12 col-md-2 col-lg-2 my-4">
-       <div class="card" style="width: 100%">
-       <img src='${singlePreferiteJson.cover_big}' class="card-img-top" alt="..." />
-       <div class="card-body">
-         <h5 class="card-title">${singlePreferiteJson.title}</h5>
-         <p class="card-text">${singlePreferiteJson.artist.name}</p>
-       </div>
-       </div>
-       </div> `;
+         <div class="card" style="width: 100%">
+           <img src='${singlePreferiteJson.cover_big}' class="card-img-top p-3" alt="photo" />
+           <div class="card-body d-flex flex-column align-items-center">
+             <h5 class="card-title fontSetter">${singlePreferiteJson.title}</h5>
+             <p class="card-text greyWrite">${singlePreferiteJson.artist.name}</p>
+           </div>
+         </div>
+       </div>`;
   }
 }
 homeEndPage();

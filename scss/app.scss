@@ -53,17 +53,21 @@ h6 {
 
 .fontSetter {
   font-size: 0.8em !important;
-  font-weight: 800;
+  font-weight: 800 !important;
   .descriptionName {
     font-size: 0.7em !important;
   }
 }
 
+.greyWrite {
+  font-weight: 600 !important;
+  font-size: 0.7em !important;
+  color: $FontColor!important;
+}
+
 .cardColor {
   background: #2F2F2F!important;
   color: white;
-  font-size: $FontForAll;
-
 }
 
 .mainCard p {
