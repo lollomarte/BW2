@@ -27,7 +27,7 @@ async function homeMidCards() {
       midCardsHits.innerHTML +
       `<div class="col-6 col-6 col-sm-6 col-md-6 col-lg-4">
                 <div class="card mb-3" style="max-width: 100%">
-                  <div class="row g-0">
+                  <div class="row g-0" style="height: 100px">
                     <div class="col-md-4">
                       <img
                         src='${singleAlbumJson.cover_big}'
