@@ -1,7 +1,7 @@
 async function homeAlbum() {
   const fetchSec2 = await fetch("https://striveschool-api.herokuapp.com/api/deezer/search?q=origins");
   const HomeFetch = await fetchSec2.json();
-console.log(HomeFetch)
+  console.log(HomeFetch);
   const homeimg = document.querySelector(".homeimg"); // immagine
   homeimg.src = HomeFetch.data[0].album.cover_big;
   const AlbumTitle = document.querySelector(".TitoloCanzone"); // canzone
@@ -18,14 +18,14 @@ async function homeMidCards() {
   for (let i = 0; i < fetchArray.length; i++) {
     let idCard;
     idCard = fetchArray[i];
-    let fetchId = 'https://striveschool-api.herokuapp.com/api/deezer/album/' + idCard;
+    let fetchId = "https://striveschool-api.herokuapp.com/api/deezer/album/" + idCard;
     const singleAlbum = await fetch(fetchId);
     const singleAlbumJson = await singleAlbum.json();
 
     const midCardsHits = document.querySelector(".midCardsHits");
     midCardsHits.innerHTML =
       midCardsHits.innerHTML +
-      `<div class="col-6 col-6 col-sm-6 col-md-4">
+      `<div class="col-6 col-6 col-sm-6 col-md-6 col-lg-4">
                 <div class="card mb-3" style="max-width: 100%">
                   <div class="row g-0">
                     <div class="col-md-4">
@@ -72,7 +72,6 @@ https: {
               </div> */
 }
 
-
 //  <div class="col-12 col-md-2 col-lg-2 my-4">
 // <div class="card" style="width: 100%">
 // <img src="./assets/img/TOPITALIA2022.jpeg" class="card-img-top" alt="..." />
@@ -81,20 +80,20 @@ https: {
 //   <p class="card-text">Ascolta il suo nuovo singolo!</p>
 // </div>
 // </div>
-// </div> 
+// </div>
 
 const PreferiteFetch = ["6041124", "6041124", "6041124", "6041124", "6041124"];
 async function homeEndPage() {
-    for (let i = 0; i < PreferiteFetch.length; i++) {
-      let PreferiteId;
-      PreferiteId = PreferiteFetch[i];
-      let PrefIdFetch = 'https://striveschool-api.herokuapp.com/api/deezer/album/' + PreferiteId;
-      const singlePreferite = await fetch(PrefIdFetch);
-      const singlePreferiteJson = await singlePreferite.json();
-      const homeEndPage = document.querySelector(".homeEndPage");
-      homeEndPage.innerHTML =
-       homeEndPage.innerHTML +
-       `<div class="col-12 col-md-2 col-lg-2 my-4">
+  for (let i = 0; i < PreferiteFetch.length; i++) {
+    let PreferiteId;
+    PreferiteId = PreferiteFetch[i];
+    let PrefIdFetch = "https://striveschool-api.herokuapp.com/api/deezer/album/" + PreferiteId;
+    const singlePreferite = await fetch(PrefIdFetch);
+    const singlePreferiteJson = await singlePreferite.json();
+    const homeEndPage = document.querySelector(".homeEndPage");
+    homeEndPage.innerHTML =
+      homeEndPage.innerHTML +
+      `<div class="col-12 col-md-2 col-lg-2 my-4">
        <div class="card" style="width: 100%">
        <img src='${singlePreferiteJson.cover_big}' class="card-img-top" alt="..." />
        <div class="card-body">
@@ -103,7 +102,6 @@ async function homeEndPage() {
        </div>
        </div>
        </div> `;
-    }
-
-} 
+  }
+}
 homeEndPage();
