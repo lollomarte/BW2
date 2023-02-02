@@ -106,6 +106,17 @@ async function homeEndPage() {
 }
 homeEndPage();
 
+async function songPlayer() {
+  const fetchSec3 = await fetch("https://striveschool-api.herokuapp.com/api/deezer/search?q=origins");
+const playerFetch = await fetchSec3.json();
+console.log(playerFetch);
+const playerArtist = document.querySelector(".songArtistPlayer");
+playerArtist.innerText = playerFetch.data[1].artist.name;
+const playerTitle = document.querySelector(".songTitlePlayer")
+playerTitle = playerFetch.data[0].title;
+} songPlayer();
+
+
 // const progressControl = document.getElementById("progress");
 // player.addEventListener("timeupdate", () => {
 //   progressControl.value = (player.currentTime / player.duration) * 100;
