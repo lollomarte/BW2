@@ -106,7 +106,40 @@ async function homeEndPage() {
 }
 homeEndPage();
 
+// const progressControl = document.getElementById("progress");
+// player.addEventListener("timeupdate", () => {
+//   progressControl.value = (player.currentTime / player.duration) * 100;
+// });
+
+//prova bottoni
+
+const player = document.getElementById("player");
+const playBtn = document.getElementById("play");
+const pauseBtn = document.getElementById("pause");
+const volumeControl = document.getElementById("volume");
 const progressControl = document.getElementById("progress");
+
+// playBtn.addEventListener("click", () => {
+//   player.play();
+// });
+
+// pauseBtn.addEventListener("click", () => {
+//   player.pause();
+// });
+
+volumeControl.addEventListener("input", () => {
+  player.volume = volumeControl.value;
+});
+
 player.addEventListener("timeupdate", () => {
   progressControl.value = (player.currentTime / player.duration) * 100;
 });
+const togglePlayPause = () => {
+  if (player.paused) {
+    player.play();
+  } else {
+    player.pause();
+  }
+};
+
+playBtn.addEventListener("click", togglePlayPause);

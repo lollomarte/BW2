@@ -492,8 +492,33 @@ audio {
   margin-bottom: 20px;
 }
 
-#progress {
+#controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   width: 100%;
-  height: 20px;
+  padding: 10px;
+}
+
+.Porvabutton {
+  background-color: #4caf50;
+  border: none;
   color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+input[type=range] {
+  width: 200px;
+  height: 4px;
+}
+
+progress {
+  width: 600px;
+  height: 6px !important;
 }/*# sourceMappingURL=app.css.map */
