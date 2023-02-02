@@ -528,16 +528,33 @@
     <p class="songArtistPlayer">Elemento di testo 2</p>
           <!-- <i class="cuorePlayer bi bi-heart"></i> -->
         </div>
+        <span>
+          <i class=" cuoreMusic bi bi-heart"></i>
+        </span>
+        
   
 
-        <div class="d-flex flex-column">
+        <div class=" mainPlayer d-flex flex-column">
           
           <div class="text-center">
-            <button class="Provabutton" id="play"><i class="bi bi-play-fill m-0 text-black fs-1"></i></button>
+            <div>
+            <i class="random bi bi-shuffle d-none d-xl-block"></i></div>
+            <div><i class="bi bi-skip-start-fill d-none d-xl-block"></i></div>
+            <div><button class="Provabutton" id="play"><i class="bi bi-play-fill m-0 text-black fs-1"></i></button></div>
+            <div><i class="bi bi-skip-end-fill d-none d-xl-block"></i></div>
+            <div> <i id="repeat" class="bi bi-repeat d-none d-xl-block"></i>
+          </div>
+            
           </div>
           <progress id="progress" value="0" max="100"></progress>
         </div>
         <input type="range" id="volume" min="0" max="1" step="any" value="1" />
+      </div>
+      <div class="leftMusic d-flex align-items-center justify-content-end">
+        <div><i class="bi bi-mic d-none d-xl-block"></i></div>
+        <div><i class="bi bi-hdd-stack d-none d-xl-block"></i></div>
+        <div><i id="muted" class="bi bi-volume-up d-none d-xl-block"></i></div>
+        <div> <i class="bi bi-arrows-angle-expand d-none d-xl-block"></i></div>
       </div>
       <!-- <section class="container-fluid player">
       <div class="d-flex justify-content-center">

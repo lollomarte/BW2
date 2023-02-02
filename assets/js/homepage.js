@@ -112,8 +112,10 @@ const playerFetch = await fetchSec3.json();
 console.log(playerFetch);
 const playerArtist = document.querySelector(".songArtistPlayer");
 playerArtist.innerText = playerFetch.data[1].artist.name;
-const playerTitle = document.querySelector(".songTitlePlayer")
-playerTitle = playerFetch.data[0].title;
+const playerTitle = document.querySelector(".songTitlePlayer");
+playerTitle.innerText = playerFetch.data[1].title;
+const playerImg = document.querySelector(".imgPlayer");
+playerImg.src = playerFetch.data[0].album.cover.small;
 } songPlayer();
 
 

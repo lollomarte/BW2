@@ -171,7 +171,6 @@ audio {
 
 #progress {
   height: 100%;
-  background-color: rgb(255, 255, 255);
 }
 
 ::-webkit-scrollbar {
@@ -281,12 +280,12 @@ color: white;
   margin-left: 80%;
   margin-bottom: 20px;
   }
-  .cuoreMusic{
-    position: fixed;
-    bottom: 0;
-    margin-right: 80%;
-    margin-bottom: 20px;
-  }
+  // .cuoreMusic{
+  //   position: fixed;
+  //   bottom: 0;
+  //   margin-right: 80%;
+  //   margin-bottom: 20px;
+  // }
 
   #controls {
     display: flex;
@@ -300,15 +299,15 @@ color: white;
     background-color: white;
     border: none;
     color: black;
-    padding: 10px 18px;
+    padding: 0px 9px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
-    margin: 4px 2px;
+    margin: 4px 1px;
     cursor: pointer;
     border-radius: 50%;
-  }
+}
 
   input[type="range"] {
     width: 200px;
@@ -334,4 +333,24 @@ color: white;
 .imgPlayer{
   width: 50px;
   float: left;
+}
+.mainPlayer{
+  margin-right: 8em;
+}
+.text-center{
+  display: flex;
+  /* flex-wrap: wrap; */
+  /* align-content: flex-start; */
+  justify-content: center;
+  align-items: center;
+}
+.cuoreMusic.bi.bi-heart:active {
+ color: purple;
+}
+
+.leftMusic {
+  bottom: 0;
+  position: fixed;
+  margin-left: 77%;
+  margin-bottom: 28px;
 }
