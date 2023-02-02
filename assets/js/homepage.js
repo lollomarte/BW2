@@ -105,3 +105,8 @@ async function homeEndPage() {
   }
 }
 homeEndPage();
+
+const progressControl = document.getElementById("progress");
+player.addEventListener("timeupdate", () => {
+  progressControl.value = (player.currentTime / player.duration) * 100;
+});

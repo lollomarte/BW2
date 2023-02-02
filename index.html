@@ -512,14 +512,13 @@
     <section class="container-fluid player">
       <div class="d-flex justify-content-center">
         <div id="txt" class="d-flex align-items-center">
-          <img id="cover-play-song" src="../assets/img/SVG_Circle.svg.png" alt="" class="img-fluid player-img" />
           <span>
-            <h4 id="title-play-song" class="m-0 player-title">
+            <h4 class="m-0 player-title">
             </h4>
-            <p id="artist-play-song" class="m-0"></p>
+            <p class="m-0"></p>
         </div>
         </span>
-        <div class="d-flex align-items-center">
+        <div class=" cuoreMusic d-flex align-items-center">
           <i class="bi bi-heart"></i>
         </div>
 
@@ -527,7 +526,7 @@
           <div class="d-flex align-items-center justify-content-center gap-3">
             <i class="random bi bi-shuffle d-none d-xl-block"></i>
             <i class="bi bi-skip-start-fill d-none d-xl-block"></i>
-            <i id="play" class="bi bi-play-fill"></i>
+            <i class="bi bi-play-fill"></i>
             <i class="bi bi-skip-end-fill d-none d-xl-block"></i>
             <i id="repeat" class="bi bi-repeat d-none d-xl-block"></i>
           </div>
@@ -536,14 +535,7 @@
             <span id="time-inizio" class="d-none d-xl-block">1:30</span>
 
             <p class="m-0 d-none d-xl-block">
-              <svg id="music-bar" height="24" width="500">
-                <line x1="10" y1="12" x2="490" y2="12" style="stroke: gray; stroke-width: 4; stroke-linecap: round" />
-                <line id="linea-play" x1="10" y1="12" x2="10" y2="12" style="
-                          stroke: white;
-                          stroke-width: 4;
-                          stroke-linecap: round;
-                        " />
-              </svg>
+              <!-- <progress id="progress" value="0" max="100"></progress> -->
             </p>
 
             <span id="time-fine" class="d-none d-xl-block">0:00</span>
@@ -552,7 +544,7 @@
           <audio class="d-none"></audio>
         </div>
 
-        <div class="d-flex align-items-center justify-content-end">
+        <div class="leftMusic d-flex align-items-center justify-content-end">
           <i class="bi bi-mic d-none d-xl-block"></i>
           <i class="bi bi-hdd-stack d-none d-xl-block"></i>
           <i id="muted" class="bi bi-volume-up d-none d-xl-block"></i>
@@ -570,8 +562,7 @@
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
-      crossorigin="anonymous"
-    ></script>
+      crossorigin="anonymous"></script>
     <script src="./prova.js"></script>
   </body>
 </html>
