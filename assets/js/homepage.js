@@ -26,18 +26,18 @@ async function homeMidCards() {
     midCardsHits.innerHTML =
       midCardsHits.innerHTML +
       `<div class="col-6 col-6 col-sm-6 col-md-6 col-lg-4">
-                <div class="card mb-3" style="max-width: 100%">
+                <div class="card mb-3 cardColor" style="max-width: 100%">
                   <div class="row g-0" style="height: 100px">
                     <div class="col-md-4">
                       <img
                         src='${singleAlbumJson.cover_big}'
                         class="img-fluid rounded-start" style="height: 100px"
-                        alt="..."
+                        alt="photo"
                       />
                     </div>
-                    <div class="col-md-8">
-                      <div class="card-body">
-                        <h5 class="card-title">${singleAlbumJson.title}</h5>
+                    <div class="col-md-8 d-flex justify-content-center align-item-center">
+                      <div class=" card-body">
+                        <h5 class="card-title fontSetter">${singleAlbumJson.title}</h5>
                       </div>
                     </div>
                   </div>

@@ -51,13 +51,21 @@ h6 {
   }
 }
 
-.rightAside {
+.fontSetter {
   font-size: 0.8em !important;
+  font-weight: 800;
   .descriptionName {
     font-size: 0.7em !important;
   }
+}
+
+.cardColor {
+  background: #2F2F2F!important;
+  color: white;
+  font-size: $FontForAll;
 
 }
+
 .mainCard p {
   font-size: 0.7em !important;
 }
@@ -195,6 +203,7 @@ audio {
   position: sticky;
   bottom: 0;
 }
+
 .player {
   background-color: #191414;
 }
@@ -218,6 +227,7 @@ audio {
   margin-right: 10px;
   cursor: pointer;
 }
+
 #time-inizio, #time-fine {
   color: #fff;
   font-size: 14px;
@@ -230,12 +240,15 @@ audio {
   color: black;
   padding: 4px;
 }
+
 .bi-repeat:active {
  color:#1ed760;
 }
+
 .bi-shuffle:active {
   color: #1ed760;
 }
+
 .bi-heart{
   color: white;
 }
@@ -252,6 +265,7 @@ audio {
       font-size: 0.7em;
     }
   }
+
   .BookmakerIconContainer {
     padding: 0px 6px;
     border-radius: 3px;
@@ -263,6 +277,7 @@ audio {
       color: #24a73d;
     }
   }
+
   .SpanLeftAside {
     @include FontAndBold;
     color: $FontColor;
@@ -271,6 +286,7 @@ audio {
   .SpanLeftAside {
     cursor: pointer;
   }
+
   .SpanLeftAside:hover {
 color: white;
   }
@@ -281,6 +297,7 @@ color: white;
   margin-left: 80%;
   margin-bottom: 20px;
   }
+
   .cuoreMusic{
     position: fixed;
     bottom: 0;

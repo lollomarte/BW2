@@ -243,11 +243,18 @@ h6 {
   font-weight: bold;
 }
 
-.rightAside {
+.fontSetter {
   font-size: 0.8em !important;
+  font-weight: 800;
 }
-.rightAside .descriptionName {
+.fontSetter .descriptionName {
   font-size: 0.7em !important;
+}
+
+.cardColor {
+  background: #2F2F2F !important;
+  color: white;
+  font-size: 0.8em;
 }
 
 .mainCard p {
