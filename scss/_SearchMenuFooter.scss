@@ -1,0 +1,48 @@
+.CardSearchMobile {
+    max-width: 48%;;
+    height: 100px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+    position: relative;
+  }
+  .imgContSearchMobile {
+    width: 80px;
+    height: 80px;
+    border-radius: 10px;
+    overflow: hidden;
+    rotate: 25deg;
+    position: absolute;
+    right: -20px;
+    bottom: -5px;
+  }
+  img {
+    width: 100%;
+  }
+  h4 {
+    margin: 0;
+    padding-top: 12px;
+    padding-left: 10px;
+    color: white;
+  }
+  .Attachtobody {
+    position: fixed;
+    top: 0;
+  }
+  .Attachtobody {
+    input {
+        width: 100%;
+        border: none;
+        background-color: #1b1b1b;
+        height: 40px;
+    }
+  }
+  .ButtonForSearching{
+    border-radius: 0;
+    border: none;
+    padding: 8px 7px;
+    background-color: #1b1b1b;
+    color: white;
+}
+  
