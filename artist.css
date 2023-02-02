@@ -45,7 +45,7 @@ td{
     font-size: 1.5em!important;
     color: white!important;
   }
-  @media screen and (min-width: 769px) {
+  @media screen and (max-width: 769px) {
     .MainContainer {
         flex-direction: column-reverse !important;
     }
