@@ -213,7 +213,7 @@ audio {
 
 .random, .bi-shuffle, .bi-skip-start-fill, .bi-play-fill, .bi-skip-end-fill, .bi-repeat, .bi-mic, .bi-hdd-stack, .bi-pc-display, .bi-volume-up, .bi-arrows-angle-expand {
   color: #fff;
-  font-size: 24px;
+  font-size: 16px;
   margin-right: 10px;
   cursor: pointer;
 }
@@ -293,6 +293,7 @@ color: white;
     justify-content: space-between;
     width: 100%;
     padding: 10px;
+    background: #1a1b1b
   }
 
   .Provabutton {
@@ -312,6 +313,7 @@ color: white;
   input[type="range"] {
     width: 200px;
     height: 4px;
+    accent-color: white;
   }
 
   progress {
@@ -351,6 +353,11 @@ color: white;
 .leftMusic {
   bottom: 0;
   position: fixed;
-  margin-left: 77%;
   margin-bottom: 28px;
 }
+
+
+.cuoreMusic.bi.bi-heart{color: white;
+    position: absolute;
+    left: 220px;
+    top: 25px;}
