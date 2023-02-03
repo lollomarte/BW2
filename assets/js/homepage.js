@@ -79,9 +79,9 @@ async function homeEndPage1() {
     const singlePreferiteJson = await singlePreferite.json();
     const homeEndPage1 = document.querySelector(".homeEndPage1");
     let titleCorrect1;
-    if (singlePreferiteJson.data[randomArray[i]].title.length > 25) {
+    if (singlePreferiteJson.data[randomArray[i]].title.length > 15) {
       let titleCorrect1Slice = singlePreferiteJson.data[randomArray[i+1]].title
-      titleCorrect1 = titleCorrect1Slice.slice(0, 25);
+      titleCorrect1 = titleCorrect1Slice.slice(0, 15);
       titleCorrect1 = titleCorrect1 + '...';
 
     } else {
@@ -112,9 +112,9 @@ async function homeEndPage2() {
     const singleRockJSON = await singleRock.json();
     const homeEndPage2 = document.querySelector(".homeEndPage2");
     let titleCorrect2;
-    if (singleRockJSON.data[randomArray[i+1]].title.length > 25) {
+    if (singleRockJSON.data[randomArray[i+1]].title.length > 15) {
       let titleCorrect2Slice = singleRockJSON.data[randomArray[i+1]].title
-      titleCorrect2 = titleCorrect2Slice.slice(0, 25);
+      titleCorrect2 = titleCorrect2Slice.slice(0, 15);
       titleCorrect2 = titleCorrect2 + '...';
 
     } else {
@@ -145,9 +145,9 @@ async function homeEndPage3() {
     const singleClassicJSON = await singleClassic.json();
     const homeEndPage3 = document.querySelector(".homeEndPage3");
     let titleCorrect3;
-    if (singleClassicJSON.data[randomArray[i+1]].title.length > 25) {
+    if (singleClassicJSON.data[randomArray[i+1]].title.length > 15) {
       let titleCorrect3Sliced = singleClassicJSON.data[randomArray[i+1]].title
-      titleCorrect3 = titleCorrect3Sliced.slice(0, 25);
+      titleCorrect3 = titleCorrect3Sliced.slice(0, 15);
       titleCorrect3 = titleCorrect3 + '...';
     } else {
       titleCorrect3 = singleClassicJSON.data[randomArray[i+1]].title

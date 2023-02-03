@@ -100,9 +100,9 @@ async function susannaRule() {
     const stringedFetchJSON = await stringedFetch.json();
     const artistRandomCard = document.querySelector(".artistRandomCard");
     let titleTitle1;
-    if (stringedFetchJSON.data[randomArtistArray[i]].title_short.length > 25) {
+    if (stringedFetchJSON.data[randomArtistArray[i]].title_short.length > 15) {
       let titleTitle1Slice = stringedFetchJSON.data[randomArtistArray[i]].title_short.title
-      titleTitle1 = titleTitle1Slice.slice(0, 25);
+      titleTitle1 = titleTitle1Slice.slice(0, 15);
       titleTitle1 = titleTitle1 + '...';
     } else {
       titleTitle1 = stringedFetchJSON.data[randomArtistArray[i]].title_short.title;
