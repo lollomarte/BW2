@@ -12,30 +12,30 @@ async function ArtistNsmeFetch() {
   console.log("songs", songs);
   console.log(songs);
   songs.forEach((song, i) => {
-    const second = (param) => {
-      if (param < 10) {
-        let second;
-        return (second = "0" + param);
-      } else {
-        return param;
-      }
-    };
-    let timer = Math.floor(song.duration / 60) + ":" + second(song.duration % 60);
+    if (i < 10) {
+      const second = (param) => {
+        if (param < 10) {
+          let second;
+          return (second = "0" + param);
+        } else {
+          return param;
+        }
+      };
+      let timer = Math.floor(song.duration / 60) + ":" + second(song.duration % 60);
 
-    const tbody = document.querySelector(".TbodyArtist");
-    tbody.innerHTML =
-      tbody.innerHTML +
-      `<tr class="mb-2 SpanLeftAsideBox">
-      <td class="numeroList">${i + 1}</td>
-      <td class="ps-2">
-        <img src="${song.album.cover_big}" width="40px" height="40px"/>
-      </td>
-      <td>
+      const tbody = document.querySelector(".TbodyArtist");
+      tbody.innerHTML =
+        tbody.innerHTML +
+        `<tr class="mb-2 SpanLeftAsideBox">
+      <td class="numeroList font-size:1em" style="width: 50px!important;">${i + 1}</td>
+      <td class="ps-2 d-flex align-items-center" style="font-size:1em">
+        <img src="${song.album.cover_big}" style="width: 50px!important;"/>
         <p class="songTitle">${song.title}</p>
       </td>
-      <td>${song.rank}</td>
-      <td>${timer}</td>
+      <td style="font-size:1em">${song.rank}</td>
+      <td style="font-size:1em">${timer}</td>
     </tr>;`;
+    }
   });
 }
 
@@ -60,10 +60,9 @@ window.onload = ArtistNsmeFetch();
   <td>3:18</td>
 </tr>; */
 
-
 // punto 1) A partire da questo endpoint: https://dummyjson.com/todos <--- fetch da fare
 // punto 2) creare una lista su un div
-// punto 3) Creare una lista usando flexbox (no ul ma div 🙂 ) 
+// punto 3) Creare una lista usando flexbox (no ul ma div 🙂 )
 // punto 4) mettere un badge con bootstrap
 // punto 5) Usando le bootstrap, inserire un badge contenente l'id dell'utente
 
@@ -71,16 +70,54 @@ window.onload = ArtistNsmeFetch();
 collegarmi al server fatto
 estrarre i dati sotto forma di stringa fatto
 rendere la stringa un oggetto fatto
-creare una serie di div
+creare una serie di div --> {
+  creare un bersaglio nel html
+  selezionarlo
+  aggiungersi una struttura html
+  caricarci variabili dinamiche
+} 
 riempirli con i dati del fetch*/
 
-// async function susannaRule() {
-//   let genre = 'rock';
-//   let urlFetch = "https://striveschool-api.herokuapp.com/api/deezer/search?q=" + genre;
-//   const stringedFetch = await fetch(urlFetch);
-//   // const stringedFetchJSON = await stringedFetch.json();
-//   // homeEndPage2.innerHTML =
-//   // homeEndPage2.innerHTML +
+const randomArtistArray = [];
 
-  
-// }
+const randomArtistArrayFunction = () => {
+  for (let i = 0; i < 6; i++) {
+    let checker = Math.floor(Math.random() * 24);
+    while (randomArtistArray.includes(checker)) {
+      checker = Math.floor(Math.random() * 24);
+    }
+    randomArtistArray[i] = checker;
+  }
+};
+
+randomArtistArrayFunction();
+
+async function susannaRule() {
+  for (let i = 0; i < randomArtistArray.length; i++) {
+    let genre = "rock";
+    let urlFetch = "https://striveschool-api.herokuapp.com/api/deezer/search?q=" + genre;
+    const stringedFetch = await fetch(urlFetch);
+    const stringedFetchJSON = await stringedFetch.json();
+    const artistRandomCard = document.querySelector(".artistRandomCard");
+    let titleTitle1;
+    if (stringedFetchJSON.data[randomArtistArray[i]].title_short.length > 25) {
+      let titleTitle1Slice = stringedFetchJSON.data[randomArtistArray[i]].title_short.title
+      titleTitle1 = titleTitle1Slice.slice(0, 25);
+      titleTitle1 = titleTitle1 + '...';
+    } else {
+      titleTitle1 = stringedFetchJSON.data[randomArtistArray[i]].title_short.title;
+    }
+    artistRandomCard.innerHTML =
+      artistRandomCard.innerHTML +
+      `<div class="col-12 col-md-2 col-lg-2 my-4 px-3">
+        <div class="card SpanLeftAsideBox" style="width: 100%;">
+          <a href="#"><img src='${stringedFetchJSON.data[randomArtistArray[i]].album.cover_big}' class="card-img-top px-3 pt-3" alt="photo" /></a>
+          <div class="card-body d-flex flex-column align-items-start">
+            <a href="#"><h5 class="card-title fontSetter">${titleTitle1}</h5></a>
+            <a href="#"><p class="card-text greyWrite">${stringedFetchJSON.data[randomArtistArray[i]].artist.name}</p></a>
+          </div>
+        </div>
+      </div>`;
+  }
+}
+susannaRule();
