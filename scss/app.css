@@ -482,11 +482,19 @@ audio {
   font-size: 2em !important;
 }
 
-.bi-repeat:active {
+.bi-repeat:hover {
   color: #1ed760;
 }
 
-.bi-shuffle:active {
+.bi-shuffle:hover {
+  color: #1ed760;
+}
+
+i.bi.bi-shuffle.clicked {
+  color: #1ed760;
+}
+
+i#repeat.clicked {
   color: #1ed760;
 }
 
@@ -627,11 +635,7 @@ progress {
   align-items: center;
 }
 
-.cuoreMusic.bi.bi-heart:active {
-  color: rgb(0, 128, 49);
-}
-
-.cuoreMusic.bi.bi-heart {
+.cuoreMusic.bi.bi-heart-fill {
   color: white;
 }
 
@@ -674,4 +678,20 @@ input[type=range]:hover::-webkit-slider-thumb {
 
 .bi-volume-mute {
   color: white;
+}
+
+.bi-pause-fill {
+  font-size: 1.5em !important;
+}
+
+#heartIcon {
+  color: #777777;
+}
+
+#heartIcon:hover {
+  color: white;
+}
+
+#heartIcon.clicked {
+  color: #1ed760;
 }/*# sourceMappingURL=app.css.map */

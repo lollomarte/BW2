@@ -18,7 +18,7 @@ const sendAlbum = async function () {
   const fetchSec2 = await fetch("https://striveschool-api.herokuapp.com/api/deezer/search?q=origins");
   const HomeFetch = await fetchSec2.json();
   let Albumid = String(HomeFetch.data[0].album.id);
-  window.location.assign(`/Album.html?Aid=${Albumid}`);
+  window.location.assign(`./album.html?Aid=${Albumid}`);
   console.log("id fuori dalla funzione", Albumid);
 };
 
@@ -29,7 +29,7 @@ const sendArtist = async function () {
   const fetchSec2 = await fetch("https://striveschool-api.herokuapp.com/api/deezer/search?q=origins");
   const HomeFetch = await fetchSec2.json();
   let Artistname = String(HomeFetch.data[0].album.id);
-  window.location.assign(`/artist.html?Aid=${Artistname}`);
+  window.location.assign(`./artist.html?Aid=${Artistname}`);
   console.log("id fuori dalla funzione", Artistname);
 };
 
