@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BUON WEEK-END!</title>
+</head>
+<style>
+    h1 {
+        text-align: center;
+        font-size: 36px;
+         font-weight: bold; 
+        color: #2c8978;
+         margin-top: 50px;
+    }
+    img {
+      display: block;
+      margin: 0 auto;
+      width: 40%;
+    }
+  </style>
+<body>
+    <div>
+    <h1> Grazie della visione! Buon Weekend a tutti!
+    </h1>
+    <div><img src="./assets/img/2c897877-tutte-2.png" alt=""></div>
+   <div id="audioPlayer"> <audio controls autoplay>
+        <source src="./Queen - We Are The Champions Lyrics.mp3" type="audio/mpeg">
+        Il tuo browser non supporta l'elemento audio.
+      </audio> </div>
+      
+</div>
+<script>
+    const audio = document.getElementById("myAudio");
+    audio.currentTime = 20;
+    audio.play();
+  </script>
+</body>
+</html>
