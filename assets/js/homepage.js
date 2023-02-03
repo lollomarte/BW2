@@ -79,13 +79,22 @@ async function homeEndPage1() {
     const singlePreferite = await fetch(PrefIdFetch);
     const singlePreferiteJson = await singlePreferite.json();
     const homeEndPage1 = document.querySelector(".homeEndPage1");
+    let titleCorrect1;
+    if (singlePreferiteJson.data[randomArray[i]].title.length > 25) {
+      let titleCorrect1Slice = singlePreferiteJson.data[randomArray[i+1]].title
+      titleCorrect1 = titleCorrect1Slice.slice(0, 25);
+      titleCorrect1 = titleCorrect1 + '...';
+
+    } else {
+      titleCorrect1 = singlePreferiteJson.data[randomArray[i+1]].title;
+    }
     homeEndPage1.innerHTML =
       homeEndPage1.innerHTML +
       `<div class="col-12 col-md-2 col-lg-2 my-4">
-         <div class="card SpanLeftAsideBox" style="width: 100%">
+         <div class="card SpanLeftAsideBox" style="width: 100%;">
          <a href="#"><img src='${singlePreferiteJson.data[randomArray[i+1]].album.cover_big}' class="card-img-top px-3 pt-3" alt="photo" /></a>
            <div class="card-body d-flex flex-column align-items-start">
-           <a href="#"><h5 class="card-title fontSetter">${singlePreferiteJson.data[randomArray[i]].title}</h5></a>
+           <a href="#"><h5 class="card-title fontSetter">${titleCorrect1}</h5></a>
            <a href="#"><p class="card-text greyWrite">${singlePreferiteJson.data[randomArray[i]].artist.name}</p></a>
            </div>
          </div>
@@ -103,13 +112,22 @@ async function homeEndPage2() {
     const singleRock = await fetch(rockIdFetch);
     const singleRockJSON = await singleRock.json();
     const homeEndPage2 = document.querySelector(".homeEndPage2");
+    let titleCorrect2;
+    if (singleRockJSON.data[randomArray[i+1]].title.length > 25) {
+      let titleCorrect2Slice = singleRockJSON.data[randomArray[i+1]].title
+      titleCorrect2 = titleCorrect2Slice.slice(0, 25);
+      titleCorrect2 = titleCorrect2 + '...';
+
+    } else {
+      titleCorrect2 = singleRockJSON.data[randomArray[i+1]].title;
+    }
     homeEndPage2.innerHTML =
       homeEndPage2.innerHTML +
       `<div class="col-12 col-md-2 col-lg-2 my-4">
-         <div class="card SpanLeftAsideBox" style="width: 100%">
+         <div class="card SpanLeftAsideBox" style="width: 100%;">
          <a href="#"><img src='${singleRockJSON.data[randomArray[i]].album.cover_big}' class="card-img-top px-3 pt-3" alt="photo" /></a>
            <div class="card-body d-flex flex-column align-items-start">
-           <a href="#"><h5 class="card-title fontSetter">${singleRockJSON.data[randomArray[i+1]].title}</h5></a>
+           <a href="#"><h5 class="card-title fontSetter">${titleCorrect2}</h5></a>
            <a href="#"><p class="card-text greyWrite">${singleRockJSON.data[randomArray[i+1]].artist.name}</p></a>
            </div>
          </div>
@@ -127,13 +145,22 @@ async function homeEndPage3() {
     const singleClassic = await fetch(ClassicIdFetch);
     const singleClassicJSON = await singleClassic.json();
     const homeEndPage3 = document.querySelector(".homeEndPage3");
+    let titleCorrect3;
+    if (singleClassicJSON.data[randomArray[i+1]].title.length > 25) {
+      let titleCorrect3Sliced = singleClassicJSON.data[randomArray[i+1]].title
+      titleCorrect3 = titleCorrect3Sliced.slice(0, 25);
+      titleCorrect3 = titleCorrect3 + '...';
+    } else {
+      titleCorrect3 = singleClassicJSON.data[randomArray[i+1]].title
+    }
+
     homeEndPage3.innerHTML =
       homeEndPage3.innerHTML +
       `<div class="col-12 col-md-2 col-lg-2 my-4">
-         <div class="card SpanLeftAsideBox" style="width: 100%">
+         <div class="card SpanLeftAsideBox" style="width: 100%;">
          <a href="#"><img src='${singleClassicJSON.data[randomArray[i]].album.cover_big}' class="card-img-top px-3 pt-3" alt="photo" /></a>
            <div class="card-body d-flex flex-column align-items-start">
-           <a href="#"><h5 class="card-title fontSetter">${singleClassicJSON.data[randomArray[i+1]].title}</h5></a>
+           <a href="#"><h5 class="card-title fontSetter">${titleCorrect3}</h5></a>
            <a href="#"><p class="card-text greyWrite">${singleClassicJSON.data[randomArray[i+1]].artist.name}</p></a>
            </div>
          </div>
@@ -142,6 +169,7 @@ async function homeEndPage3() {
 }
 
 homeEndPage3();
+
 async function songPlayer() {
   const fetchSec3 = await fetch("https://striveschool-api.herokuapp.com/api/deezer/search?q=origins");
 const playerFetch = await fetchSec3.json();
@@ -196,7 +224,7 @@ playBtn.addEventListener("click", togglePlayPause);
 const aside = document.querySelector('.mediaPlayer');
 
 function hideAside() {
-  if (window.innerWidth < 1200) {
+  if (window.innerWidth < 1250) {
     aside.style.display = 'none';
   } else {
     aside.style.display = 'block';
