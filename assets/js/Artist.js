@@ -113,7 +113,7 @@ async function susannaRule() {
         <div class="card SpanLeftAsideBox" style="width: 100%;">
           <a href="#"><img src='${stringedFetchJSON.data[randomArtistArray[i]].album.cover_big}' class="card-img-top px-3 pt-3" alt="photo" /></a>
           <div class="card-body d-flex flex-column align-items-start">
-            <a href="#"><h5 class="card-title fontSetter">${titleTitle1}</h5></a>
+            <a href="#"><h5 class="card-title">${titleTitle1}</h5></a>
             <a href="#"><p class="card-text greyWrite">${stringedFetchJSON.data[randomArtistArray[i]].artist.name}</p></a>
           </div>
         </div>
