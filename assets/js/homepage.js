@@ -160,44 +160,62 @@ async function songPlayer() {
 }
 songPlayer();
 
+
+
 // const progressControl = document.getElementById("progress");
 // player.addEventListener("timeupdate", () => {
 //   progressControl.value = (player.currentTime / player.duration) * 100;
 // });
 
 //prova bottoni
-
+// PLAYER 
 const player = document.getElementById("player");
 const playBtn = document.getElementById("play");
-const pauseBtn = document.getElementById("pause");
-const volumeControl = document.getElementById("volume");
 const progressControl = document.getElementById("progress");
+const startTime = document.querySelector(".StartTimeOfTheSong");
 
-// playBtn.addEventListener("click", () => {
-//   player.play();
-// });
-
-// pauseBtn.addEventListener("click", () => {
-//   player.pause();
-// });
-
-volumeControl.addEventListener("input", () => {
-  player.volume = volumeControl.value;
-});
+let interval;
 
 player.addEventListener("timeupdate", () => {
   progressControl.value = (player.currentTime / player.duration) * 100;
+
+  const minutes = Math.floor(player.currentTime / 60);
+  const seconds = Math.floor(player.currentTime % 60);
+  startTime.innerText = `${minutes}:${seconds < 10 ? "0" + seconds : seconds}`;
 });
+
 const togglePlayPause = () => {
   if (player.paused) {
+    interval = setInterval(() => {
+      const minutes = Math.floor(player.currentTime / 60);
+      const seconds = Math.floor(player.currentTime % 60);
+      startTime.innerText = `${minutes}:${seconds < 10 ? "0" + seconds : seconds}`;
+    }, 1000);
     player.play();
   } else {
+    clearInterval(interval);
     player.pause();
   }
 };
 
 playBtn.addEventListener("click", togglePlayPause);
 
+const volumeUp = document.getElementById("muted");
+const volumeControl = document.getElementById("volumeControl");
+
+volumeUp.addEventListener("click", function () {
+  volumeUp.classList.toggle("bi-volume-up");
+  volumeUp.classList.toggle("bi-volume-mute");
+  if (volumeUp.classList.contains("bi-volume-mute")) {
+    volumeControl.value = 0;
+  }
+});
+
+volumeControl.addEventListener("input", () => {
+  player.volume = volumeControl.value;
+});
+
+// SPARIZIONE ASIDE SOTTO I 1200PX
 const aside = document.querySelector(".mediaPlayer");
 
 function hideAside() {
@@ -207,14 +225,5 @@ function hideAside() {
     aside.style.display = "block";
   }
 }
-
-hideAside();
-
 window.addEventListener("resize", hideAside);
-
-const volumeUp = document.querySelector("#muted");
-
-volumeUp.addEventListener("click", function () {
-  volumeUp.classList.toggle("bi-volume-up");
-  volumeUp.classList.toggle("bi-volume-mute");
-});
+hideAside();
