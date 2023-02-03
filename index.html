@@ -318,7 +318,7 @@
 
       <div id="controls">
         <div>
-          <span class="imgPlayer"><img src="./assets/img/Meloni.jpg" alt=""></span>
+          <img class="imgPlayer" src="./assets/img/Meloni.jpg" alt="">
            <p class="songTitlePlayer">Elemento di testo 1</p>
     <p class="songArtistPlayer">Elemento di testo 2</p>
           <!-- <i class="cuorePlayer bi bi-heart"></i> -->
@@ -332,16 +332,16 @@
         <div class=" mainPlayer d-flex flex-column">
           
           <div class="text-center">
-            <div>
-            <i class="random bi bi-shuffle d-none d-xl-block"></i></div>
+            <div class="centerPlayer">
+            <div><i class="random bi bi-shuffle d-none d-xl-block"></i></div>
             <div><i class="bi bi-skip-start-fill d-none d-xl-block"></i></div>
             <div><button class="Provabutton" id="play"><i class="bi bi-play-fill m-0 text-black fs-1"></i></button></div>
             <div><i class="bi bi-skip-end-fill d-none d-xl-block"></i></div>
             <div> <i id="repeat" class="bi bi-repeat d-none d-xl-block"></i>
           </div>
-            
-          </div>
-          <progress id="progress" value="0" max="100"></progress>
+            </div>
+         <div> <progress id="progress" value="0" max="100"></progress></div>
+        </div>
         </div>
         <input type="range" id="volume" min="0" max="1" step="any" value="1" />
       </div>

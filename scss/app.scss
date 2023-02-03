@@ -201,15 +201,6 @@ audio {
   margin: 20px 10px;
 }
 
-#progress {
-  height: 100%;
-  position: absolute;
-  bottom: 0%;
-  left: 39%;
-  top: 80%;
-  /* right: 50%; */
-  width: 540px;
-}
 
 ::-webkit-scrollbar {
   width: 5px;
@@ -347,31 +338,35 @@ audio {
   border-radius: 5px;
 }
 
-.leftMusic {
-  bottom: 0;
-  position: fixed;
-  margin-left: 80%;
-  margin-bottom: 20px;
-}
+// .leftMusic {
+//   bottom: 0;
+//   position: fixed;
+//   margin-left: 80%;
+//   margin-bottom: 20px;
+// }
 
-.cuoreMusic {
-  position: fixed;
-  bottom: 0;
-  margin-right: 80%;
-  margin-bottom: 20px;
-}
+// .cuoreMusic {
+//   position: fixed;
+//   bottom: 0;
+//   margin-right: 80%;
+//   margin-bottom: 20px;
+// }
 
 #progress {
-  width: 100%;
-  height: 20px;
-  color: white;
+  height: 100%;
+  position: absolute;
+  bottom: 0%;
+  left: -145%;
+  top: 80%;
+  /* right: 35%; */
+  width: 540px;
 }
   .leftMusic {
     position: absolute;
     top: 5%;
     right: 10%;
     bottom: 5%;
-    left: 90%;
+
 }
   // .cuoreMusic{
   //   position: fixed;
@@ -446,7 +441,7 @@ input[type=range] {
   width: 50px;
   /* float: left; */
   position: absolute;
-  top: 7%;
+  top: 15%;
   left: 1%;
 }
 .mainPlayer{
@@ -470,6 +465,7 @@ input[type=range] {
   top: 0%;
   bottom: 10%;
   left: 50%;
+  width: 200px;
 }
 .cuoreMusic.bi.bi-heart:active {
  color: rgb(0, 128, 49);
@@ -490,3 +486,19 @@ input[type=range] {
   .bi-play-fill{
     font-size: 25px !important;
   }
+
+  .bi-skip-end-fill, .bi-skip-start-fill, .bi-shuffle, .bi-repeat, .bi-play-fill  {
+    margin-left: 15px;
+    font-size: 1.5em !important;
+    margin-right: 20px;
+  }
+  .centerPlayer {
+    display: flex;
+    /* width: 100%; */
+    flex-wrap: nowrap;
+    /* align-content: center; */
+    align-items: center;
+    position: absolute;
+    right: 45%;
+    top: 25%;
+}
