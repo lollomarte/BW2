@@ -1,5 +1,9 @@
+let params = new URLSearchParams(location.search);
+let Artistname = params.get("Artistname");
+
 async function ArtistNsmeFetch() {
-  const fetchartistname = await fetch(" https://striveschool-api.herokuapp.com/api/deezer/album/75621062");
+  const ArtistUrl = "https://striveschool-api.herokuapp.com/api/deezer/artist/" + Artistname;
+  const fetchartistname = await fetch(ArtistUrl);
   const AlbumJason = await fetchartistname.json();
   console.log(AlbumJason);
   const { artist } = AlbumJason;
@@ -101,9 +105,9 @@ async function susannaRule() {
     const artistRandomCard = document.querySelector(".artistRandomCard");
     let titleTitle1;
     if (stringedFetchJSON.data[randomArtistArray[i]].title_short.length > 15) {
-      let titleTitle1Slice = stringedFetchJSON.data[randomArtistArray[i]].title_short.title
+      let titleTitle1Slice = stringedFetchJSON.data[randomArtistArray[i]].title_short.title;
       titleTitle1 = titleTitle1Slice.slice(0, 15);
-      titleTitle1 = titleTitle1 + '...';
+      titleTitle1 = titleTitle1 + "...";
     } else {
       titleTitle1 = stringedFetchJSON.data[randomArtistArray[i]].title_short.title;
     }
@@ -111,10 +115,14 @@ async function susannaRule() {
       artistRandomCard.innerHTML +
       `<div class="col-12 col-md-2 col-lg-2 my-4 px-3">
         <div class="card SpanLeftAsideBox" style="width: 100%;">
-          <a href="#"><img src='${stringedFetchJSON.data[randomArtistArray[i]].album.cover_big}' class="card-img-top px-3 pt-3" alt="photo" /></a>
+          <a href="#"><img src='${
+            stringedFetchJSON.data[randomArtistArray[i]].album.cover_big
+          }' class="card-img-top px-3 pt-3" alt="photo" /></a>
           <div class="card-body d-flex flex-column align-items-start">
             <a href="#"><h5 class="card-title">${titleTitle1}</h5></a>
-            <a href="#"><p class="card-text greyWrite">${stringedFetchJSON.data[randomArtistArray[i]].artist.name}</p></a>
+            <a href="#"><p class="card-text greyWrite">${
+              stringedFetchJSON.data[randomArtistArray[i]].artist.name
+            }</p></a>
           </div>
         </div>
       </div>`;
