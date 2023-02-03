@@ -156,3 +156,21 @@ const togglePlayPause = () => {
 };
 
 playBtn.addEventListener("click", togglePlayPause);
+
+const aside = document.querySelector('.mediaPlayer');
+
+function hideAside() {
+  if (window.innerWidth < 1200) {
+    aside.style.display = 'none';
+  } else {
+    aside.style.display = 'block';
+  }
+}
+
+hideAside();
+
+window.addEventListener('resize', hideAside);
+
+
+
+
