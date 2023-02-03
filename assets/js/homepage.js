@@ -10,7 +10,31 @@ async function homeAlbum() {
   AlbumTitle.innerText = HomeFetch.data[0].title;
   const ArtistName = document.querySelector(".ArtistName"); // nome artista
   ArtistName.innerText = HomeFetch.data[0].artist.name;
+  let Albumid = String(HomeFetch.data[0].album.id);
+  console.log("id da passare", Albumid);
 }
+
+const sendAlbum = async function () {
+  const fetchSec2 = await fetch("https://striveschool-api.herokuapp.com/api/deezer/search?q=origins");
+  const HomeFetch = await fetchSec2.json();
+  let Albumid = String(HomeFetch.data[0].album.id);
+  window.location.assign(`/Album.html?Aid=${Albumid}`);
+  console.log("id fuori dalla funzione", Albumid);
+};
+
+const homeimg = document.querySelector(".homeimg"); // immagine
+homeimg.addEventListener("click", sendAlbum);
+
+const sendArtist = async function () {
+  const fetchSec2 = await fetch("https://striveschool-api.herokuapp.com/api/deezer/search?q=origins");
+  const HomeFetch = await fetchSec2.json();
+  let Artistname = String(HomeFetch.data[0].artist.name);
+  window.location.assign(`/artist.html?Aid=${Artistname}`);
+  console.log("id fuori dalla funzione", Artistname);
+};
+
+const ArtistName = document.querySelector(".ArtistName"); // nome artista
+ArtistName.addEventListener("click", sendArtist);
 
 window.onload = homeAlbum();
 
@@ -80,18 +104,19 @@ async function homeEndPage1() {
     const homeEndPage1 = document.querySelector(".homeEndPage1");
     let titleCorrect1;
     if (singlePreferiteJson.data[randomArray[i]].title.length > 15) {
-      let titleCorrect1Slice = singlePreferiteJson.data[randomArray[i+1]].title
+      let titleCorrect1Slice = singlePreferiteJson.data[randomArray[i + 1]].title;
       titleCorrect1 = titleCorrect1Slice.slice(0, 15);
-      titleCorrect1 = titleCorrect1 + '...';
-
+      titleCorrect1 = titleCorrect1 + "...";
     } else {
-      titleCorrect1 = singlePreferiteJson.data[randomArray[i+1]].title;
+      titleCorrect1 = singlePreferiteJson.data[randomArray[i + 1]].title;
     }
     homeEndPage1.innerHTML =
       homeEndPage1.innerHTML +
       `<div class="col-12 col-md-2 col-lg-2 my-4">
          <div class="card SpanLeftAsideBox" style="width: 100%;">
-         <a href="#"><img src='${singlePreferiteJson.data[randomArray[i+1]].album.cover_big}' class="card-img-top px-3 pt-3" alt="photo" /></a>
+         <a href="#"><img src='${
+           singlePreferiteJson.data[randomArray[i + 1]].album.cover_big
+         }' class="card-img-top px-3 pt-3" alt="photo" /></a>
            <div class="card-body d-flex flex-column align-items-start">
            <a href="#"><h5 class="card-title fontSetter">${titleCorrect1}</h5></a>
            <a href="#"><p class="card-text greyWrite">${singlePreferiteJson.data[randomArray[i]].artist.name}</p></a>
@@ -112,22 +137,23 @@ async function homeEndPage2() {
     const singleRockJSON = await singleRock.json();
     const homeEndPage2 = document.querySelector(".homeEndPage2");
     let titleCorrect2;
-    if (singleRockJSON.data[randomArray[i+1]].title.length > 15) {
-      let titleCorrect2Slice = singleRockJSON.data[randomArray[i+1]].title
+    if (singleRockJSON.data[randomArray[i + 1]].title.length > 15) {
+      let titleCorrect2Slice = singleRockJSON.data[randomArray[i + 1]].title;
       titleCorrect2 = titleCorrect2Slice.slice(0, 15);
-      titleCorrect2 = titleCorrect2 + '...';
-
+      titleCorrect2 = titleCorrect2 + "...";
     } else {
-      titleCorrect2 = singleRockJSON.data[randomArray[i+1]].title;
+      titleCorrect2 = singleRockJSON.data[randomArray[i + 1]].title;
     }
     homeEndPage2.innerHTML =
       homeEndPage2.innerHTML +
       `<div class="col-12 col-md-2 col-lg-2 my-4">
          <div class="card SpanLeftAsideBox" style="width: 100%;">
-         <a href="#"><img src='${singleRockJSON.data[randomArray[i]].album.cover_big}' class="card-img-top px-3 pt-3" alt="photo" /></a>
+         <a href="#"><img src='${
+           singleRockJSON.data[randomArray[i]].album.cover_big
+         }' class="card-img-top px-3 pt-3" alt="photo" /></a>
            <div class="card-body d-flex flex-column align-items-start">
            <a href="#"><h5 class="card-title fontSetter">${titleCorrect2}</h5></a>
-           <a href="#"><p class="card-text greyWrite">${singleRockJSON.data[randomArray[i+1]].artist.name}</p></a>
+           <a href="#"><p class="card-text greyWrite">${singleRockJSON.data[randomArray[i + 1]].artist.name}</p></a>
            </div>
          </div>
        </div>`;
@@ -145,22 +171,24 @@ async function homeEndPage3() {
     const singleClassicJSON = await singleClassic.json();
     const homeEndPage3 = document.querySelector(".homeEndPage3");
     let titleCorrect3;
-    if (singleClassicJSON.data[randomArray[i+1]].title.length > 15) {
-      let titleCorrect3Sliced = singleClassicJSON.data[randomArray[i+1]].title
+    if (singleClassicJSON.data[randomArray[i + 1]].title.length > 15) {
+      let titleCorrect3Sliced = singleClassicJSON.data[randomArray[i + 1]].title;
       titleCorrect3 = titleCorrect3Sliced.slice(0, 15);
-      titleCorrect3 = titleCorrect3 + '...';
+      titleCorrect3 = titleCorrect3 + "...";
     } else {
-      titleCorrect3 = singleClassicJSON.data[randomArray[i+1]].title
+      titleCorrect3 = singleClassicJSON.data[randomArray[i + 1]].title;
     }
 
     homeEndPage3.innerHTML =
       homeEndPage3.innerHTML +
       `<div class="col-12 col-md-2 col-lg-2 my-4">
          <div class="card SpanLeftAsideBox" style="width: 100%;">
-         <a href="#"><img src='${singleClassicJSON.data[randomArray[i]].album.cover_big}' class="card-img-top px-3 pt-3" alt="photo" /></a>
+         <a href="#"><img src='${
+           singleClassicJSON.data[randomArray[i]].album.cover_big
+         }' class="card-img-top px-3 pt-3" alt="photo" /></a>
            <div class="card-body d-flex flex-column align-items-start">
            <a href="#"><h5 class="card-title fontSetter">${titleCorrect3}</h5></a>
-           <a href="#"><p class="card-text greyWrite">${singleClassicJSON.data[randomArray[i+1]].artist.name}</p></a>
+           <a href="#"><p class="card-text greyWrite">${singleClassicJSON.data[randomArray[i + 1]].artist.name}</p></a>
            </div>
          </div>
        </div>`;
