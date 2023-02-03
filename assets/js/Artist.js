@@ -59,3 +59,28 @@ window.onload = ArtistNsmeFetch();
   <td>276.616.912</td>
   <td>3:18</td>
 </tr>; */
+
+
+// punto 1) A partire da questo endpoint: https://dummyjson.com/todos <--- fetch da fare
+// punto 2) creare una lista su un div
+// punto 3) Creare una lista usando flexbox (no ul ma div 🙂 ) 
+// punto 4) mettere un badge con bootstrap
+// punto 5) Usando le bootstrap, inserire un badge contenente l'id dell'utente
+
+/* punto 1 e 2) selezionare l'url fatto
+collegarmi al server fatto
+estrarre i dati sotto forma di stringa fatto
+rendere la stringa un oggetto fatto
+creare una serie di div
+riempirli con i dati del fetch*/
+
+// async function susannaRule() {
+//   let genre = 'rock';
+//   let urlFetch = "https://striveschool-api.herokuapp.com/api/deezer/search?q=" + genre;
+//   const stringedFetch = await fetch(urlFetch);
+//   // const stringedFetchJSON = await stringedFetch.json();
+//   // homeEndPage2.innerHTML =
+//   // homeEndPage2.innerHTML +
+
+  
+// }
