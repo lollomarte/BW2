@@ -19,7 +19,7 @@ window.onload = homeAlbum();
 const genreGen = ["blues", "metal", "pop", "classic", "country", "rap"];
 const randomArray = [];
 
-    // random idCard gen
+// random idCard gen
 
 const randomArrayFunction = () => {
   for (let i = 0; i < 6; i++) {
@@ -33,7 +33,6 @@ const randomArrayFunction = () => {
 
 async function homeMidCards() {
   for (let i = 0; i < 6; i++) {
-    
     randomArrayFunction();
 
     let idCard = genreGen[Math.floor(Math.random() * 5)];
@@ -74,7 +73,7 @@ async function homeEndPage1() {
   for (let i = 0; i < 5; i++) {
     let PreferiteId;
     PreferiteId = genreGen[Math.floor(Math.random() * 5)];
-    console.log(PreferiteId)
+    console.log(PreferiteId);
     let PrefIdFetch = "https://striveschool-api.herokuapp.com/api/deezer/search?q=" + PreferiteId;
     const singlePreferite = await fetch(PrefIdFetch);
     const singlePreferiteJson = await singlePreferite.json();
@@ -83,7 +82,9 @@ async function homeEndPage1() {
       homeEndPage1.innerHTML +
       `<div class="col-12 col-md-2 col-lg-2 my-4">
          <div class="card SpanLeftAsideBox" style="width: 100%">
-         <a href="#"><img src='${singlePreferiteJson.data[randomArray[i+1]].album.cover_big}' class="card-img-top px-3 pt-3" alt="photo" /></a>
+         <a href="#"><img src='${
+           singlePreferiteJson.data[randomArray[i + 1]].album.cover_big
+         }' class="card-img-top px-3 pt-3" alt="photo" /></a>
            <div class="card-body d-flex flex-column align-items-start">
            <a href="#"><h5 class="card-title fontSetter">${singlePreferiteJson.data[randomArray[i]].title}</h5></a>
            <a href="#"><p class="card-text greyWrite">${singlePreferiteJson.data[randomArray[i]].artist.name}</p></a>
@@ -107,10 +108,12 @@ async function homeEndPage2() {
       homeEndPage2.innerHTML +
       `<div class="col-12 col-md-2 col-lg-2 my-4">
          <div class="card SpanLeftAsideBox" style="width: 100%">
-         <a href="#"><img src='${singleRockJSON.data[randomArray[i]].album.cover_big}' class="card-img-top px-3 pt-3" alt="photo" /></a>
+         <a href="#"><img src='${
+           singleRockJSON.data[randomArray[i]].album.cover_big
+         }' class="card-img-top px-3 pt-3" alt="photo" /></a>
            <div class="card-body d-flex flex-column align-items-start">
-           <a href="#"><h5 class="card-title fontSetter">${singleRockJSON.data[randomArray[i+1]].title}</h5></a>
-           <a href="#"><p class="card-text greyWrite">${singleRockJSON.data[randomArray[i+1]].artist.name}</p></a>
+           <a href="#"><h5 class="card-title fontSetter">${singleRockJSON.data[randomArray[i + 1]].title}</h5></a>
+           <a href="#"><p class="card-text greyWrite">${singleRockJSON.data[randomArray[i + 1]].artist.name}</p></a>
            </div>
          </div>
        </div>`;
@@ -131,10 +134,12 @@ async function homeEndPage3() {
       homeEndPage3.innerHTML +
       `<div class="col-12 col-md-2 col-lg-2 my-4">
          <div class="card SpanLeftAsideBox" style="width: 100%">
-         <a href="#"><img src='${singleClassicJSON.data[randomArray[i]].album.cover_big}' class="card-img-top px-3 pt-3" alt="photo" /></a>
+         <a href="#"><img src='${
+           singleClassicJSON.data[randomArray[i]].album.cover_big
+         }' class="card-img-top px-3 pt-3" alt="photo" /></a>
            <div class="card-body d-flex flex-column align-items-start">
-           <a href="#"><h5 class="card-title fontSetter">${singleClassicJSON.data[randomArray[i+1]].title}</h5></a>
-           <a href="#"><p class="card-text greyWrite">${singleClassicJSON.data[randomArray[i+1]].artist.name}</p></a>
+           <a href="#"><h5 class="card-title fontSetter">${singleClassicJSON.data[randomArray[i + 1]].title}</h5></a>
+           <a href="#"><p class="card-text greyWrite">${singleClassicJSON.data[randomArray[i + 1]].artist.name}</p></a>
            </div>
          </div>
        </div>`;
@@ -144,16 +149,16 @@ async function homeEndPage3() {
 homeEndPage3();
 async function songPlayer() {
   const fetchSec3 = await fetch("https://striveschool-api.herokuapp.com/api/deezer/search?q=origins");
-const playerFetch = await fetchSec3.json();
-console.log(playerFetch);
-const playerArtist = document.querySelector(".songArtistPlayer");
-playerArtist.innerText = playerFetch.data[1].artist.name;
-const playerTitle = document.querySelector(".songTitlePlayer");
-playerTitle.innerText = playerFetch.data[1].title;
-const playerImg = document.querySelector(".imgPlayer");
-playerImg.src = playerFetch.data[0].album.cover.small;
-} songPlayer();
-
+  const playerFetch = await fetchSec3.json();
+  console.log(playerFetch);
+  const playerArtist = document.querySelector(".songArtistPlayer");
+  playerArtist.innerText = playerFetch.data[1].artist.name;
+  const playerTitle = document.querySelector(".songTitlePlayer");
+  playerTitle.innerText = playerFetch.data[1].title;
+  const playerImg = document.querySelector(".imgPlayer");
+  playerImg.src = playerFetch.data[0].album.cover.small;
+}
+songPlayer();
 
 // const progressControl = document.getElementById("progress");
 // player.addEventListener("timeupdate", () => {
@@ -193,20 +198,23 @@ const togglePlayPause = () => {
 
 playBtn.addEventListener("click", togglePlayPause);
 
-const aside = document.querySelector('.mediaPlayer');
+const aside = document.querySelector(".mediaPlayer");
 
 function hideAside() {
   if (window.innerWidth < 1200) {
-    aside.style.display = 'none';
+    aside.style.display = "none";
   } else {
-    aside.style.display = 'block';
+    aside.style.display = "block";
   }
 }
 
 hideAside();
 
-window.addEventListener('resize', hideAside);
+window.addEventListener("resize", hideAside);
 
+const volumeUp = document.querySelector("#muted");
 
-
-
+volumeUp.addEventListener("click", function () {
+  volumeUp.classList.toggle("bi-volume-up");
+  volumeUp.classList.toggle("bi-volume-mute");
+});
