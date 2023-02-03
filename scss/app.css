@@ -406,7 +406,12 @@ audio {
 
 #progress {
   height: 100%;
-  background-color: rgb(255, 255, 255);
+  position: absolute;
+  bottom: 0%;
+  left: 39%;
+  top: 80%;
+  /* right: 50%; */
+  width: 540px;
 }
 
 ::-webkit-scrollbar {
@@ -461,7 +466,7 @@ audio {
 .bi-volume-up,
 .bi-arrows-angle-expand {
   color: #fff;
-  font-size: 24px;
+  font-size: 16px;
   margin-right: 10px;
   cursor: pointer;
 }
@@ -569,4 +574,119 @@ audio {
   width: 100%;
   height: 20px;
   color: white;
+}
+
+.leftMusic {
+  position: absolute;
+  top: 5%;
+  right: 10%;
+  bottom: 5%;
+  left: 90%;
+}
+
+#controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0px;
+  background: #1a1b1b;
+  border-top: solid 1px grey;
+  height: 12vh;
+}
+
+.Provabutton {
+  background-color: white;
+  border: none;
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+input[type=range] {
+  width: 115px;
+  height: 4px;
+  accent-color: white;
+  position: absolute;
+  /* right: 2%; */
+  position: absolute;
+  top: 45%;
+  /* right: 10%; */
+  /* bottom: 25%; */
+  left: 90%;
+  /* bottom: 0; */
+}
+
+progress {
+  width: 600px;
+  height: 6px !important;
+}
+
+.songTitlePlayer {
+  color: white !important;
+  font-weight: bold !important;
+  font-size: 15px !important;
+  /* margin-left: 4em !important; */
+  position: absolute;
+  top: 15%;
+  left: 5%;
+}
+
+.songArtistPlayer {
+  color: white !important;
+  font-size: 13px !important;
+  position: absolute;
+  left: 5%;
+  right: 0;
+  bottom: 25%;
+  top: 55%;
+}
+
+.imgPlayer {
+  width: 50px;
+  /* float: left; */
+  position: absolute;
+  top: 7%;
+  left: 1%;
+}
+
+.mainPlayer .mainPlayer {
+  /* margin-right: 8em; */
+  position: absolute;
+  top: 20%;
+  right: 50%;
+  bottom: 5%;
+  left: 40%;
+}
+
+.text-center {
+  display: flex;
+  /* flex-wrap: wrap; */
+  /* align-content: flex-start; */
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 50%;
+  top: 0%;
+  bottom: 10%;
+  left: 50%;
+}
+
+.cuoreMusic.bi.bi-heart:active {
+  color: rgb(0, 128, 49);
+}
+
+.cuoreMusic.bi.bi-heart {
+  color: white;
+  position: absolute;
+  left: 15%;
+  top: 25px;
+}
+
+.bi-play-fill {
+  font-size: 25px !important;
 }/*# sourceMappingURL=app.css.map */

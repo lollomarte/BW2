@@ -142,8 +142,71 @@ async function homeEndPage3() {
 }
 
 homeEndPage3();
+async function songPlayer() {
+  const fetchSec3 = await fetch("https://striveschool-api.herokuapp.com/api/deezer/search?q=origins");
+const playerFetch = await fetchSec3.json();
+console.log(playerFetch);
+const playerArtist = document.querySelector(".songArtistPlayer");
+playerArtist.innerText = playerFetch.data[1].artist.name;
+const playerTitle = document.querySelector(".songTitlePlayer");
+playerTitle.innerText = playerFetch.data[1].title;
+const playerImg = document.querySelector(".imgPlayer");
+playerImg.src = playerFetch.data[0].album.cover.small;
+} songPlayer();
+
 
 // const progressControl = document.getElementById("progress");
 // player.addEventListener("timeupdate", () => {
 //   progressControl.value = (player.currentTime / player.duration) * 100;
 // });
+
+//prova bottoni
+
+const player = document.getElementById("player");
+const playBtn = document.getElementById("play");
+const pauseBtn = document.getElementById("pause");
+const volumeControl = document.getElementById("volume");
+const progressControl = document.getElementById("progress");
+
+// playBtn.addEventListener("click", () => {
+//   player.play();
+// });
+
+// pauseBtn.addEventListener("click", () => {
+//   player.pause();
+// });
+
+volumeControl.addEventListener("input", () => {
+  player.volume = volumeControl.value;
+});
+
+player.addEventListener("timeupdate", () => {
+  progressControl.value = (player.currentTime / player.duration) * 100;
+});
+const togglePlayPause = () => {
+  if (player.paused) {
+    player.play();
+  } else {
+    player.pause();
+  }
+};
+
+playBtn.addEventListener("click", togglePlayPause);
+
+const aside = document.querySelector('.mediaPlayer');
+
+function hideAside() {
+  if (window.innerWidth < 1200) {
+    aside.style.display = 'none';
+  } else {
+    aside.style.display = 'block';
+  }
+}
+
+hideAside();
+
+window.addEventListener('resize', hideAside);
+
+
+
+
