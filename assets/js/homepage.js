@@ -169,6 +169,7 @@ songPlayer();
 
 //prova bottoni
 // PLAYER 
+
 const player = document.getElementById("player");
 const playBtn = document.getElementById("play");
 const progressControl = document.getElementById("progress");
@@ -185,15 +186,18 @@ player.addEventListener("timeupdate", () => {
 });
 
 const togglePlayPause = () => {
+  const icon = playBtn.querySelector("i");
   if (player.paused) {
     interval = setInterval(() => {
       const minutes = Math.floor(player.currentTime / 60);
       const seconds = Math.floor(player.currentTime % 60);
       startTime.innerText = `${minutes}:${seconds < 10 ? "0" + seconds : seconds}`;
     }, 1000);
+    icon.className = "bi bi-pause-fill m-0 text-black fs-1";
     player.play();
   } else {
     clearInterval(interval);
+    icon.className = "bi bi-play-fill m-0 text-black fs-1";
     player.pause();
   }
 };
@@ -214,6 +218,11 @@ volumeUp.addEventListener("click", function () {
 volumeControl.addEventListener("input", () => {
   player.volume = volumeControl.value;
 });
+progressControl.addEventListener("click", function(event) {
+  let percent = event.offsetX / this.offsetWidth;
+  player.currentTime = percent * player.duration;
+});
+
 
 // SPARIZIONE ASIDE SOTTO I 1200PX
 const aside = document.querySelector(".mediaPlayer");
@@ -227,3 +236,20 @@ function hideAside() {
 }
 window.addEventListener("resize", hideAside);
 hideAside();
+
+// icona CUORE
+const heartIcon = document.getElementById("heartIcon");
+heartIcon.addEventListener("click", function() {
+this.classList.toggle("clicked");
+});
+
+const shuffleBtn = document.querySelector(".bi-shuffle");
+const repeatBtn = document.getElementById("repeat");
+
+shuffleBtn.addEventListener("click", function() {
+this.classList.toggle("clicked");
+});
+
+repeatBtn.addEventListener("click", function() {
+this.classList.toggle("clicked");
+});

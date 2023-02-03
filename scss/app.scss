@@ -283,13 +283,21 @@ audio {
   color: black !important;
   font-size: 2em !important;
 }
-.bi-repeat:active {
+// ICONE ACTIVE AND CLICK GREEN COLOR
+.bi-repeat:hover {
   color: #1ed760;
 }
 
-.bi-shuffle:active {
+.bi-shuffle:hover{
   color: #1ed760;
 }
+i.bi.bi-shuffle.clicked {
+  color:#1ed760;
+  }
+  
+  i#repeat.clicked {
+    color:#1ed760;
+  }
 
 .bi-heart {
   color: white;
@@ -459,7 +467,7 @@ audio {
 // }
 
 
-.cuoreMusic.bi.bi-heart{color: white;
+.cuoreMusic.bi.bi-heart-fill{color: white;
   }
   .bi-play-fill{
     font-size: 25px !important;
@@ -496,8 +504,22 @@ audio {
  .bi-volume-mute {
   color: white;
  }
+
+.bi-pause-fill{
+  font-size: 1.5em !important;
+ }
   
+ #heartIcon {
+  color: #777777;
   
+  }
   
+  #heartIcon:hover {
+  color: white;
+  }
+  
+  #heartIcon.clicked {
+    color: #1ed760;
+    }
   
   
