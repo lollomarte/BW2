@@ -150,11 +150,7 @@
 
           <!-- Start Homepage Main Card -->
           <div class="col-12 firstCol position-relative">
-            <a href="#"
-              ><p class="position-absolute top-0 end-0 pt-3 pe-4 SpanLeftAsideB">
-                NASCONDI ANNUNCI
-              </p></a
-            >
+            <a href="#"><p class="position-absolute top-0 end-0 pt-3 pe-4 SpanLeftAsideB">NASCONDI ANNUNCI</p></a>
 
             <div
               class="row headerAlbum mx-1 mt-4 mb-3 d-flex align-items-end py-3"
@@ -310,6 +306,8 @@
       </div>
     </footer>
 
+    <!-- Container del Player -->
+
     <aside class="mediaPlayer bg-black">
       <audio id="player">
         <source src="./atmospheric_jazz_remix.mp3" type="audio/mpeg" />
@@ -317,102 +315,74 @@
       </audio>
 
       <div id="controls">
-        <div>
-          <img class="imgPlayer" src="./assets/img/Meloni.jpg" alt="">
-           <p class="songTitlePlayer">Elemento di testo 1</p>
-    <p class="songArtistPlayer">Elemento di testo 2</p>
-          <!-- <i class="cuorePlayer bi bi-heart"></i> -->
-        </div>
-        <span>
-          <i class=" cuoreMusic bi bi-heart"></i>
-        </span>
-        
-  
-
-        <div class=" mainPlayer d-flex flex-column">
-          
-          <div class="text-center">
-            <div class="centerPlayer">
-            <div><i class="random bi bi-shuffle d-none d-xl-block"></i></div>
-            <div><i class="bi bi-skip-start-fill d-none d-xl-block"></i></div>
-            <div><button class="Provabutton" id="play"><i class="bi bi-play-fill m-0 text-black fs-1"></i></button></div>
-            <div><i class="bi bi-skip-end-fill d-none d-xl-block"></i></div>
-            <div> <i id="repeat" class="bi bi-repeat d-none d-xl-block"></i>
+        <!--  -->
+        <!-- div in basso a sinistra -->
+        <!--  -->
+        <div class="d-flex align-items-center">
+          <div class="imgPlayer ms-3"><img src="./assets/img/Meloni.jpg" alt="" /></div>
+          <div class="ms-2">
+            <p class="songTitlePlayer">Elemento di testo 1</p>
+            <a href="./artist.html"><p class="songArtistPlayer">Elemento di testo 2</p></a>
           </div>
+
+          <div class="ms-4"><i class="cuoreMusic bi bi-heart"></i></div>
+        </div>
+        <!--  -->
+        <!-- Fine div in basso a sinistra -->
+        <!--  -->
+
+        <!--  -->
+        <!-- div Centrale -->
+        <!--  -->
+        <div class="mainPlayer d-flex flex-column align-items-center">
+          <div class="text-center justify-content-around">
+            <div>
+              <i class="random bi bi-shuffle d-none d-xl-block"></i>
             </div>
-         <div> <progress id="progress" value="0" max="100"></progress></div>
+            <div>
+              <i class="bi bi-skip-start-fill d-none d-xl-block"></i>
+            </div>
+            <div>
+              <button class="Provabutton" id="play"><i class="bi bi-play-fill m-0 text-black fs-1"></i></button>
+            </div>
+            <div>
+              <i class="bi bi-skip-end-fill d-none d-xl-block"></i>
+            </div>
+            <div>
+              <i id="repeat" class="bi bi-repeat d-none d-xl-block"></i>
+            </div>
+          </div>
+          <div class="d-flex align-items-center">
+            <div><p class="StartTimeOfTheSong me-2">0:39</p></div>
+            <div>
+              <progress id="progress" value="0" max="100"></progress>
+            </div>
+            <div><p class="EndTimeOfTheSong ms-2">3:42</p></div>
+          </div>
         </div>
+        <!--  -->
+        <!-- Fine div Centrale -->
+        <!--  -->
+
+        <!--  -->
+        <!-- div per volume e icone a destra -->
+        <!--  -->
+
+        <div class="d-flex align-items-center">
+          <div class="d-flex">
+            <div><i class="bi bi-mic d-none d-xl-block me-3"></i></div>
+            <div><i class="bi bi-hdd-stack d-none d-xl-block me-3"></i></div>
+            <div><i id="muted" class="bi bi-volume-up d-xl-block me-3"></i></div>
+          </div>
+          <div><input type="range" id="volume" min="0" max="1" step="any" value="1" /></div>
+          <div><i class="bi bi-arrows-angle-expand d-none d-xl-block mx-3"></i></div>
         </div>
-        <input type="range" id="volume" min="0" max="1" step="any" value="1" />
-      </div>
-      <div class="leftMusic d-flex align-items-center justify-content-end">
-        <div><i class="bi bi-mic d-none d-xl-block"></i></div>
-        <div><i class="bi bi-hdd-stack d-none d-xl-block"></i></div>
-        <div><i id="muted" class="bi bi-volume-up  d-xl-block"></i></div>
+
+        <!--  -->
+        <!-- Fine div per volume e icone a destra -->
+        <!--  -->
       </div>
     </aside>
-      <!-- <section class="container-fluid player">
-      <div class="d-flex justify-content-center">
-        <div id="txt" class="d-flex align-items-center">
-          <span>
-            <h4 class="m-0 player-title">
-            </h4>
-            <p class="m-0"></p>
-        </div>
-        </span>
-        <div class=" cuoreMusic d-flex align-items-center">
-          <i class="bi bi-heart"></i>
-        </div>
-
-    <aside class="mediaPlayer">
-      <section class="container-fluid player">
-        <div class="d-flex justify-content-center">
-          <div id="txt" class="d-flex align-items-center">
-            <span>
-              <h4 class="m-0 player-title"></h4>
-              <p class="m-0"></p>
-            </span>
-          </div>
-          <div class="cuoreMusic d-flex align-items-center">
-            <i class="bi bi-heart"></i>
-          </div>
-
-          <div class="d-flex justify-content-center align-items-center">
-             <span id="time-inizio" class="d-none d-xl-block">1:30</span> -->
-
-      <!-- <p class="m-0 d-none d-xl-block"> -->
-      <!-- <progress id="progress" value="0" max="100"></progress> -->
-      <!-- </p>
-
-            <span id="time-fine" class="d-none d-xl-block">0:00</span> -->
-      <!-- </div>
-
-          <div class="leftMusic d-flex align-items-center justify-content-end">
-            <i class="bi bi-mic d-none d-xl-block"></i>
-            <i class="bi bi-hdd-stack d-none d-xl-block"></i>
-            <i id="muted" class="bi bi-volume-up d-none d-xl-block"></i>
-            <svg id="volum-bar" class="d-none d-xl-block" height="24" width="100">
-              <line x1="2" y1="12" x2="98" y2="12" style="stroke: gray; stroke-width: 4; stroke-linecap: round" />
-              <line x1="2" y1="12" x2="98" y2="12" style="stroke: white; stroke-width: 4; stroke-linecap: round" />
-            </svg>
-            <i class="bi bi-arrows-angle-expand d-none d-xl-block"></i>
-          </div>
-        </div>
-
-        <div class="leftMusic d-flex align-items-center justify-content-end">
-          <i class="bi bi-mic d-none d-xl-block"></i>
-          <i class="bi bi-hdd-stack d-none d-xl-block"></i>
-          <i id="muted" class="bi bi-volume-up d-none d-xl-block"></i>
-          <svg id="volum-bar" class="d-none d-xl-block" height="24" width="100">
-            <line x1="2" y1="12" x2="98" y2="12" style="stroke: gray; stroke-width: 4; stroke-linecap: round" />
-            <line x1="2" y1="12" x2="98" y2="12" style="stroke: white; stroke-width: 4; stroke-linecap: round" />
-          </svg>
-          <i class="bi bi-arrows-angle-expand d-none d-xl-block"></i>
-        </div>
-      </div>  
-    </section> -->
- 
-
     <script src="./assets/js/homepage.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
