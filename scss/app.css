@@ -550,13 +550,6 @@ audio {
   border-radius: 5px;
 }
 
-.leftMusic {
-  bottom: 0;
-  position: fixed;
-  margin-left: 80%;
-  margin-bottom: 20px;
-}
-
 #progress {
   height: 20px;
   color: white;
@@ -614,9 +607,6 @@ progress {
 .imgPlayer {
   width: 50px;
   /* float: left; */
-  position: absolute; // aggiunto da tony
-  top: 15%; // aggiunto da tony
-  left: 1%; // aggiunto da tony
 }
 
 .mainPlayer .mainPlayer {
@@ -635,12 +625,6 @@ progress {
   /* align-content: flex-start; */
   justify-content: center;
   align-items: center;
-  position: absolute; // aggiunto da tony
-  right: 50%; // aggiunto da tony
-  top: 0%;  // aggiunto da tony
-  bottom: 10%;  // aggiunto da tony
-  left: 50%;  // aggiunto da tony
-  width: 200px; // aggiunto da tony
 }
 
 .cuoreMusic.bi.bi-heart:active {
