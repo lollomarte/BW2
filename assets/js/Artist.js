@@ -1,9 +1,11 @@
-let params = new URLSearchParams(location.search);
-let Artistname = params.get("Artistname");
+// let params = new URLSearchParams(location.search);
+// let Artistname = params.get("Artistname");
+// console.log(Artistname);
 
 async function ArtistNsmeFetch() {
-  const ArtistUrl = "https://striveschool-api.herokuapp.com/api/deezer/artist/" + Artistname;
+  const ArtistUrl = "https://striveschool-api.herokuapp.com/api/deezer/album/" + "77648602";
   const fetchartistname = await fetch(ArtistUrl);
+  console.log(fetchartistname);
   const AlbumJason = await fetchartistname.json();
   console.log(AlbumJason);
   const { artist } = AlbumJason;
