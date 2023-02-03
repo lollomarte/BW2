@@ -105,7 +105,7 @@
 }
 
 .fontSetterAlbum {
-  font-size: 1.2em !important;
+  font-size: 1.5em !important;
 }
 
 .database {
@@ -256,7 +256,7 @@ h6 {
 }
 
 .fontSetter {
-  font-size: 0.8em !important;
+  font-size: 1.2em !important;
   font-weight: 800 !important;
 }
 
@@ -267,7 +267,7 @@ h6 {
 
 .greyWrite {
   font-weight: 600 !important;
-  font-size: 0.7em !important;
+  font-size: 1em !important;
   color: #cac7bc !important;
 }
 

@@ -27,13 +27,13 @@ async function ArtistNsmeFetch() {
       tbody.innerHTML =
         tbody.innerHTML +
         `<tr class="mb-2 SpanLeftAsideBox">
-      <td class="numeroList font-size:1em" style="width: 50px!important;">${i + 1}</td>
-      <td class="ps-2 d-flex align-items-center" style="font-size:1em">
+      <td class="numeroList font-size:1.2em" style="width: 50px!important;">${i + 1}</td>
+      <td class="ps-2 d-flex align-items-center" style="font-size:1.2em">
         <img src="${song.album.cover_big}" style="width: 50px!important;"/>
         <p class="songTitle">${song.title}</p>
       </td>
-      <td style="font-size:1em">${song.rank}</td>
-      <td style="font-size:1em">${timer}</td>
+      <td style="font-size:1.2em">${song.rank}</td>
+      <td style="font-size:1.2em">${timer}</td>
     </tr>;`;
     }
   });
